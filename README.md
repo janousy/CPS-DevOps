@@ -23,6 +23,10 @@ eval results:
 - wekahelper.build_modules
 - use training file "?0.4-06-split-datasetname.csv?" for training file
 
+## Meeting with Sebastiano on 5.11.20
+Split Groups:
+- Ramon, Michael: CPS and Jenkings
+- Alain, Gokhila, Janosch: Try Simulator with Drones (AirSim)
 
 ## Next Steps
 - current no SSH connection to server
