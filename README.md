@@ -16,7 +16,7 @@ eval results:
 
 - We need to adjust the model training to get classification of unsafe/safe (since not provided in results)
     
-    ''' @CPS-Sorter/src/cps-sorter/services/cli.py '''
+    ``` CPS-Sorter/src/cps-sorter/services/cli.py ```
 
 - required: weka_helper.py
 - wekahelper - make_bulk_predictions
