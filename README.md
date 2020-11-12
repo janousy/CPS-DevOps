@@ -40,4 +40,5 @@ Simulators:
 - Carla
     - only builds for Windows/Linux, MacOs build not recommended (https://carla.readthedocs.io/en/latest/)
     - Could use OpenDrive for generating road meshes (RoadRunner required)
+    - Asfault only generates env's for cars!
     - (But how to let an AI drive through this mesh?)
