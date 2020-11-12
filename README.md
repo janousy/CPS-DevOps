@@ -33,3 +33,11 @@ Split Groups:
 - install CPS on Server
 - refactor ML pipeline
 - setup Jenkins pipeline
+
+## Meeting 12.11.2020
+Simulators:
+- asfault only generating test cases for BeamNG
+- Carla
+    - only builds for Windows/Linux, MacOs build not recommended (https://carla.readthedocs.io/en/latest/)
+    - Could use OpenDrive for generating road meshes (RoadRunner required)
+    - (But how to let an AI drive through this mesh?)
