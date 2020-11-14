@@ -18,12 +18,9 @@ Getting ScenarioRunner up and ready:
 	- https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#setting-environment-variables
 
 *env vars need are being reset when leaving an environement
+-> i had to use absolute paths instead of using variables in paths for PYTHONPATH
 
 conda activate (your env)
-
-conda env config vars set CARLA_ROOT=C:\Users\janosch\Repos\CARLA_0.9.10
-conda env config vars set SCENARIO_RUNNER_ROOT=C:\Users\janosch\Repos\scenario_runner-0.9.10
-conda env config vars set PYTHONPATH=%CARLA_ROOT%\PythonAPI;%CARLA_ROOT%\PythonAPI\carla\agents;%CARLA_ROOT%\PythonAPI\carla\dist\carla-0.9.10-py3.7-win-amd64.egg
 
 conda env config vars set CARLA_ROOT=C:\Users\janosch\Repos\CARLA_0.9.10"
 conda env config vars set SCENARIO_RUNNER_ROOT=C:\Users\janosch\Repos\scenario_runner-0.9.10"
@@ -32,8 +29,12 @@ conda env config vars set PYTHONPATH=C:\Users\janosch\Repos\CARLA_0.9.10\PythonA
 conda activate (your env)
 conda env config vars list
 
-- Run Carla with low graphic mode: $ ./CarlaUE4.exe -carla-server -quality-level=Low
-- check for port : netstat -ab
+- Run Carla with low graphic mode:
+	- cd ~/carla-root
+ 	- CarlaUE4.exe -carla-server -quality-level=Low
+- Run Carla with low graphic mode CarlaUE4.exe -carla-server -quality-level=Low
+- Run Carla with low graphic mode CarlaUE4.exe -carla-server -quality-level=Low
+- check for port in cmd (administrator) : netstat -ab
 		=> CarlaUE4 should be running on port 2000
 - change map: cd ..\PythonAPI\util
 		python config.py --map --list
