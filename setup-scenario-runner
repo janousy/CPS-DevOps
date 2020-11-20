@@ -35,6 +35,8 @@ conda env config vars list
 - Run Carla with low graphic mode: $ ./CarlaUE4.exe -carla-server -quality-level=Low
 - check for port : netstat -ab
 		=> CarlaUE4 should be running on port 2000
+- run scenario runner : python scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld
+- activate contro: python manual_control.py
 - change map: cd ..\PythonAPI\util
 		python config.py --map --list
 		python config.py --map <MAP>
