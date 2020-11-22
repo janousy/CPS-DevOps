@@ -43,3 +43,7 @@ conda env config vars list
 - change map: cd ..\PythonAPI\util
 		python config.py --map --list
 		python config.py --map <MAP>
+------------
+##auto control
+	
+https://github.com/flomllr/PointNet_CARLA
