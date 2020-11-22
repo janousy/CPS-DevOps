@@ -1,9 +1,9 @@
 Getting ScenarioRunner up and ready:
 
 - Set up Carla precompiled
-- set up an environment e.g. with anaconda
+- set up an environment e.g. with anaconda, check Carla/PythonAPI (.egg file) for python version!
 - install carla python requirements.txt
-- Get ScenarioRunner package with same version as Carla 
+- Get ScenarioRunner package with **same version** as Carla 
 - https://github.com/carla-simulator/scenario_runner/blob/master/Docs/getting_scenariorunner.md
 - Set up a python environment that uses the same python version as Carla:
 	look at ~/Carla/PythonAPI/dist/carla<Version>.egg
@@ -33,9 +33,13 @@ conda env config vars list
 	- cd ~/carla-root
  	- CarlaUE4.exe -carla-server -quality-level=Low
 - Run Carla with low graphic mode CarlaUE4.exe -carla-server -quality-level=Low
-- Run Carla with low graphic mode CarlaUE4.exe -carla-server -quality-level=Low
 - check for port in cmd (administrator) : netstat -ab
 		=> CarlaUE4 should be running on port 2000
+- Run Scenario runner:
+	- Start scenario:
+	- python scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld
+	- Run control:
+	- python manual_control.py
 - change map: cd ..\PythonAPI\util
 		python config.py --map --list
 		python config.py --map <MAP>
