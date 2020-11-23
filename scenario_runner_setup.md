@@ -1,4 +1,4 @@
-#Running
+## Running
 - Run Carla with low graphic mode: 
 
 	```$ ./CarlaUE4.exe -carla-server -quality-level=Low```
@@ -27,8 +27,8 @@
 		python config.py --map <MAP>```
 
 
-
-#Installation and setup
+------
+## Installation and setup
 Getting ScenarioRunner up and ready:
 
 - Set up Carla precompiled
