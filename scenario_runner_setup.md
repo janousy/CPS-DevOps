@@ -1,3 +1,34 @@
+#Running
+- Run Carla with low graphic mode: 
+
+	```$ ./CarlaUE4.exe -carla-server -quality-level=Low```
+- (optional) check for port with admin cmd:
+
+	```netstat -ab```
+
+	=> CarlaUE4 should be running on port 2000
+- run scenario runner :
+
+	```python scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld```
+	
+- activate control:
+
+	```python manual_control.py```
+	
+	CAVEAT: both carla and scenario runner provide a script for manual control, however the one of scenario runner is recommended
+- there's also automatic control:
+
+	```~\CARLA_0.9.10\PythonAPI\examples\automatic_control.py"```
+	
+- change map: 
+
+		```cd ..\PythonAPI\util
+		python config.py --map --list
+		python config.py --map <MAP>```
+
+
+
+#Installation and setup
 Getting ScenarioRunner up and ready:
 
 - Set up Carla precompiled
@@ -39,29 +70,4 @@ conda activate (your env)
 conda env config vars list
 ```
 
-- Run Carla with low graphic mode: 
 
-	```$ ./CarlaUE4.exe -carla-server -quality-level=Low```
-- (optional) check for port with admin cmd:
-
-	```netstat -ab```
-
-	=> CarlaUE4 should be running on port 2000
-- run scenario runner :
-
-	```python scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld```
-	
-- activate control:
-
-	```python manual_control.py```
-	
-	CAVEAT: both carla and scenario runner provide a script for manual control, however the one of scenario runner is recommended
-- there's also automatic control:
-
-	```~\CARLA_0.9.10\PythonAPI\examples\automatic_control.py"```
-	
-- change map: 
-
-		```cd ..\PythonAPI\util
-		python config.py --map --list
-		python config.py --map <MAP>```
