@@ -70,4 +70,8 @@ conda activate (your env)
 conda env config vars list
 ```
 
+## Links
+- Carla Setup: https://carla.readthedocs.io/en/latest/start_quickstart/
+- Scenario Runner: https://github.com/carla-simulator/scenario_runner
+- Scenario Runner Doc: https://carla-scenariorunner.readthedocs.io/en/latest/
 
