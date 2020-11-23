@@ -7,7 +7,11 @@
 	```netstat -ab```
 
 	=> CarlaUE4 should be running on port 2000
-- run scenario runner :
+- get list of scenarios available:
+
+	```python scenario_runner.py --list```
+
+- run scenario:
 
 	```python scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld```
 	
@@ -20,11 +24,13 @@
 	```python manual_control.py```
 	
 	CAVEAT: both carla and scenario runner provide a script for manual control, however the one of scenario runner is recommended
+	
 - there's also automatic control:
 
 	```~\CARLA_0.9.10\PythonAPI\examples\automatic_control.py"```
 	
 - change map: 
+
 		```
 		cd C:\Users\janosch\Repos\CARLA_0.9.10\PythonAPI\util\config.py
 		python config.py --list
