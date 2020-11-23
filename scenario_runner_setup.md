@@ -8,9 +8,10 @@
 
 	=> CarlaUE4 should be running on port 2000
 - run scenario runner :
-
 	```python scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld```
-	
+	if you load the automatic control:
+	```python scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld --waitForEgo```
+
 - activate control:
 
 	```python manual_control.py```
@@ -19,12 +20,13 @@
 - there's also automatic control:
 
 	```~\CARLA_0.9.10\PythonAPI\examples\automatic_control.py"```
-	
+- 
 - change map: 
-
-		```cd ..\PythonAPI\util
-		python config.py --map --list
-		python config.py --map <MAP>```
+		```
+		cd C:\Users\janosch\Repos\CARLA_0.9.10\PythonAPI\util\config.py
+		python config.py --list
+		python config.py --map Town01
+		```
 
 
 ------
