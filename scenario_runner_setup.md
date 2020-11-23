@@ -21,9 +21,11 @@ Getting ScenarioRunner up and ready:
 
 conda activate (your env)
 
+'''
 conda env config vars set CARLA_ROOT=C:\Users\janosch\Repos\CARLA_0.9.10
 conda env config vars set SCENARIO_RUNNER_ROOT=C:\Users\janosch\Repos\scenario_runner-0.9.10
 conda env config vars set PYTHONPATH=%CARLA_ROOT%\PythonAPI;%CARLA_ROOT%\PythonAPI\carla\agents;%CARLA_ROOT%\PythonAPI\carla\dist\carla-0.9.10-py3.7-win-amd64.egg
+'''
 
 conda env config vars set CARLA_ROOT=C:\Users\janosch\Repos\CARLA_0.9.10"
 conda env config vars set SCENARIO_RUNNER_ROOT=C:\Users\janosch\Repos\scenario_runner-0.9.10"
