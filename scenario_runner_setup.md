@@ -21,26 +21,47 @@ Getting ScenarioRunner up and ready:
 
 conda activate (your env)
 
-'''
+```
 conda env config vars set CARLA_ROOT=C:\Users\janosch\Repos\CARLA_0.9.10
 conda env config vars set SCENARIO_RUNNER_ROOT=C:\Users\janosch\Repos\scenario_runner-0.9.10
 conda env config vars set PYTHONPATH=%CARLA_ROOT%\PythonAPI;%CARLA_ROOT%\PythonAPI\carla\agents;%CARLA_ROOT%\PythonAPI\carla\dist\carla-0.9.10-py3.7-win-amd64.egg
-'''
-
+```
+or best without variables to prevent issues
+```
 conda env config vars set CARLA_ROOT=C:\Users\janosch\Repos\CARLA_0.9.10"
 conda env config vars set SCENARIO_RUNNER_ROOT=C:\Users\janosch\Repos\scenario_runner-0.9.10"
 conda env config vars set PYTHONPATH=C:\Users\janosch\Repos\CARLA_0.9.10\PythonAPI;C:\Users\janosch\Repos\CARLA_0.9.10\PythonAPI\carla;C:\Users\janosch\Repos\CARLA_0.9.10\PythonAPI\carla\agents;C:\Users\janosch\Repos\CARLA_0.9.10\PythonAPI\carla\dist\carla-0.9.10-py3.7-win-amd64.egg
+```
 
+reactivate conda environment and check applied changes:
+```
 conda activate (your env)
 conda env config vars list
+```
 
-- Run Carla with low graphic mode: $ ./CarlaUE4.exe -carla-server -quality-level=Low
-- check for port : netstat -ab
-		=> CarlaUE4 should be running on port 2000
-- run scenario runner : python scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld
-- activate control: python manual_control.py (scenario runner and carla manual control actually)
+- Run Carla with low graphic mode: 
+
+	```$ ./CarlaUE4.exe -carla-server -quality-level=Low```
+- (optional) check for port with admin cmd:
+
+	```netstat -ab```
+
+	=> CarlaUE4 should be running on port 2000
+- run scenario runner :
+
+	```python scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld```
+	
+- activate control:
+
+	```python manual_control.py```
+	
+	CAVEAT: both carla and scenario runner provide a script for manual control, however the one of scenario runner is recommended
 - there's also automatic control:
-	~\CARLA_0.9.10\PythonAPI\examples\automatic_control.py"
-- change map: cd ..\PythonAPI\util
+
+	```~\CARLA_0.9.10\PythonAPI\examples\automatic_control.py"```
+	
+- change map: 
+
+		```cd ..\PythonAPI\util
 		python config.py --map --list
-		python config.py --map <MAP>
+		python config.py --map <MAP>```
