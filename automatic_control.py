@@ -125,7 +125,7 @@ class World(object):
         # Modded Area
         # Get a random blueprint.
         # blueprint = random.choice(self.world.get_blueprint_library().filter(self._actor_filter))
-        blueprint = self.world.get_blueprint_library().filter(self._actor_filter)[21]
+        blueprint = self.world.get_blueprint_library().filter(self._actor_filter)[25]
         print(blueprint)
         blueprint.set_attribute('role_name', 'hero')
         if blueprint.has_attribute('color'):
@@ -150,14 +150,13 @@ class World(object):
             # Modded AREA:
 
             # spawn_points = self.map.get_spawn_points()
+
             spawn_point = self.map.get_spawn_points()[0]
-            spawn_point.location.x = 0.63
-            spawn_point.location.y = 109.91
-            spawn_point.location.z = 1.22
-            spawn_point.rotation.yaw = 359
-            x = "7.63"
-            y = "109.91"
-            z = "1.22"
+            spawn_point.location.x = 53
+            spawn_point.location.y = 128.1
+            spawn_point.location.z = 1
+            spawn_point.rotation.yaw = 178
+
             self.player = self.world.try_spawn_actor(blueprint, spawn_point)
             # END Modded Area
 
