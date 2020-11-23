@@ -87,9 +87,9 @@ conda env config vars list
 - Scenario Runner Doc: https://carla-scenariorunner.readthedocs.io/en/latest/
 
 ## Scenario List
-- ChangeLane_1 x="284.4" y="16.4" z="2.5" yaw="-173"
+- ChangeLane_1, x="284.4" y="16.4" z="2.5" yaw="-173", no
 - ChangeLane_2
-- ControlLoss_1
+- ControlLoss_1, no
 - ControlLoss_2
 - ControlLoss_3
 - ControlLoss_4
@@ -103,11 +103,11 @@ conda env config vars list
 - ControlLoss_12
 - ControlLoss_13
 - ControlLoss_14
-- ControlLoss_15
-- CutInFrom_left_Lane
-- CutInFrom_right_Lane
-- FollowLeadingVehicle_1
-- FollowLeadingVehicleWithObstacle_1
+- ControlLoss_15, no
+- !! CutInFrom_left_Lane,  x="284.4" y="16.4" z="2.5" yaw="180" model="vehicle.lincoln.mkz2017", yes
+- CutInFrom_right_Lane,  x="284.4" y="16.4" z="2.5" yaw="180" model="vehicle.lincoln.mkz2017", yes
+- FollowLeadingVehicle_1 x="107" y="133" z="0.5" yaw="0" model="vehicle.lincoln.mkz2017"
+- !! FollowLeadingVehicleWithObstacle_1  x="107" y="133.5" z="0.5" yaw="0" model="vehicle.lincoln.mkz2017"
 - FollowLeadingVehicle_2
 - FollowLeadingVehicleWithObstacle_2
 - FollowLeadingVehicle_3
@@ -131,7 +131,7 @@ conda env config vars list
 - FreeRide_1
 - FreeRide_2
 - FreeRide_3
-- FreeRide_4
+- FreeRide_4  x="269" y="-246" z="0" yaw="0" model="vehicle.tesla.model3"
 - MultiEgo_1
 - MultiEgo_2
 - OtherLeadingVehicle_1
@@ -145,65 +145,65 @@ conda env config vars list
 - OtherLeadingVehicle_9
 - OtherLeadingVehicle_10
 - NoSignalJunctionCrossing
-- StationaryObjectCrossing_1
-- DynamicObjectCrossing_1
+- !! StationaryObjectCrossing_1, x="7.63" y="109.91" z="1.22" yaw="359"
+- DynamicObjectCrossing_1, x="7.63" y="109.91" z="1.22" yaw="359"
 - StationaryObjectCrossing_2
-DynamicObjectCrossing_2
-StationaryObjectCrossing_3
-DynamicObjectCrossing_3
-StationaryObjectCrossing_4
-DynamicObjectCrossing_4
-StationaryObjectCrossing_5
-DynamicObjectCrossing_5
-StationaryObjectCrossing_6
-DynamicObjectCrossing_6
-StationaryObjectCrossing_7
-DynamicObjectCrossing_7
-StationaryObjectCrossing_8
-DynamicObjectCrossing_8
-DynamicObjectCrossing_9
-ManeuverOppositeDirection_1
-ManeuverOppositeDirection_2
-ManeuverOppositeDirection_3
-ManeuverOppositeDirection_4
-OppositeVehicleRunningRedLight_1
-OppositeVehicleRunningRedLight_2
-OppositeVehicleRunningRedLight_3
-OppositeVehicleRunningRedLight_4
-OppositeVehicleRunningRedLight_5
-SignalizedJunctionLeftTurn_1
-SignalizedJunctionLeftTurn_2
-SignalizedJunctionLeftTurn_3
-SignalizedJunctionLeftTurn_4
-SignalizedJunctionLeftTurn_5
-SignalizedJunctionLeftTurn_6
-SignalizedJunctionRightTurn_1
-SignalizedJunctionRightTurn_2
-SignalizedJunctionRightTurn_3
-SignalizedJunctionRightTurn_4
-SignalizedJunctionRightTurn_5
-SignalizedJunctionRightTurn_6
-SignalizedJunctionRightTurn_7
-VehicleTurningRight_1
-VehicleTurningLeft_1
-VehicleTurningRight_2
-VehicleTurningLeft_2
-VehicleTurningRight_3
-VehicleTurningLeft_3
-VehicleTurningRight_4
-VehicleTurningLeft_4
-VehicleTurningRight_5
-VehicleTurningLeft_5
-VehicleTurningRight_6
-VehicleTurningLeft_6
-VehicleTurningRight_7
-VehicleTurningLeft_7
-VehicleTurningRight_8
-VehicleTurningLeft_8
-CARLA:PedestrianCrossing (OpenSCENARIO)
-CARLA:ChangingWeatherExample (OpenSCENARIO)
-CARLA:CyclistCrossing (OpenSCENARIO)
-CARLA:FollowLeadingVehicle (OpenSCENARIO)
-CARLA:LaneChangeSimple (OpenSCENARIO)
-CARLA:ControllerExample (OpenSCENARIO)
-CARLA:PedestrianCrossing (OpenSCENARIO)
+- DynamicObjectCrossing_2
+- StationaryObjectCrossing_3
+- DynamicObjectCrossing_3
+- StationaryObjectCrossing_4
+- DynamicObjectCrossing_4
+- StationaryObjectCrossing_5
+- DynamicObjectCrossing_5
+- StationaryObjectCrossing_6
+- DynamicObjectCrossing_6
+- StationaryObjectCrossing_7
+- DynamicObjectCrossing_7
+- StationaryObjectCrossing_8
+- DynamicObjectCrossing_8
+- DynamicObjectCrossing_9
+- ManeuverOppositeDirection_1,  x="17" y="136" z="2" yaw="0"
+- ManeuverOppositeDirection_2
+- ManeuverOppositeDirection_3
+- ManeuverOppositeDirection_4
+- OppositeVehicleRunningRedLight_1 x="126.4" y="55.2" z="1" yaw="180"
+- OppositeVehicleRunningRedLight_2
+- OppositeVehicleRunningRedLight_3
+- OppositeVehicleRunningRedLight_4
+- OppositeVehicleRunningRedLight_5
+- SignalizedJunctionLeftTurn_1  x="-133.7" y="137.4" z="0.2" yaw="0"
+- SignalizedJunctionLeftTurn_2
+- SignalizedJunctionLeftTurn_3
+- SignalizedJunctionLeftTurn_4
+- SignalizedJunctionLeftTurn_5
+- SignalizedJunctionLeftTurn_6
+- SignalizedJunctionRightTurn_1, x="53" y="128.1" z="1" yaw="178"
+- SignalizedJunctionRightTurn_2
+- SignalizedJunctionRightTurn_3
+- SignalizedJunctionRightTurn_4
+- SignalizedJunctionRightTurn_5
+- SignalizedJunctionRightTurn_6
+- SignalizedJunctionRightTurn_7
+- VehicleTurningRight_1
+- VehicleTurningLeft_1
+- VehicleTurningRight_2
+- VehicleTurningLeft_2
+- VehicleTurningRight_3
+- VehicleTurningLeft_3
+- VehicleTurningRight_4
+- VehicleTurningLeft_4
+- VehicleTurningRight_5
+- VehicleTurningLeft_5
+- VehicleTurningRight_6
+- VehicleTurningLeft_6
+- VehicleTurningRight_7
+- VehicleTurningLeft_7
+- VehicleTurningRight_8
+- VehicleTurningLeft_8
+- CARLA:PedestrianCrossing (OpenSCENARIO)
+- CARLA:ChangingWeatherExample (OpenSCENARIO)
+- CARLA:CyclistCrossing (OpenSCENARIO)
+- CARLA:FollowLeadingVehicle (OpenSCENARIO)
+- CARLA:LaneChangeSimple (OpenSCENARIO)
+- CARLA:ControllerExample (OpenSCENARIO)
+- CARLA:PedestrianCrossing (OpenSCENARIO)
