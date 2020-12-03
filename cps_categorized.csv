@@ -1,4 +1,3 @@
-CPS-DEVOPS: Categorizing Scenarios provided by Carla Scenario Runner
 Name,Ego Vehicle Spawn Points,Valid,City,Lane Change,Turn,Safety Level,Observation,Success
 ChangeLane_1,"x=""284.4"" y=""16.4"" z=""2.5"" yaw=""-173"" ",1,0,1,0,2,"does not execute required lane change, but breaks",1
 ChangeLane_2,"x=""107"" y=""133.5"" z=""0.5"" yaw=""0""",1,0,1,0,2,collision with leading vehicle,0
