@@ -22,8 +22,7 @@ Setting up the Python Environment
 	- you can find the version at:  ~/Carla/PythonAPI/dist/carla<Version>.egg
 - pip install numpy pygame
 - make sure correct version of networkx==2.2 is installed (see scenariorunner docs)
-- cd ~/scenariorunner_root
-- pip install -r requirements.txt
+- pip install -r ~/scenariorunner_root/requirements.txt
 - shapely problems: https://towardsdatascience.com/install-shapely-on-windows-72b6581bb46c (conda install -c conda-forge geos=3.7.1 solved the issue for me)
 - Set up environment variables:
 	- https://github.com/carla-simulator/scenario_runner/blob/master/Docs/getting_scenariorunner.md
@@ -93,9 +92,9 @@ The carla repository itself also provides automatic control of vehicles, an init
 
 You will find the initial file at https://github.com/carla-simulator/carla/tree/master/PythonAPI/examples/automatic_control.py
 
-	```cd ~\carla\PythonAPI\examples\automatic_control.py```
+```cd ~\carla\PythonAPI\examples\automatic_control.py```
 
-This repo includes a modified version of the automatic_control.py, such that the agent can be loaded into a scenario of the scenario runner.
+This repo includes a modified version of the automatic_control.py, such that the autonomous agent can be loaded into a scenario of the scenario runner.
 
 We modified this version to able to integrate it to scenarios provided by the scenario runner. See the file automatic_control.py in this repos and search for "modded area" to find our changes.
 
@@ -116,13 +115,13 @@ You can find available scenarios in the file "scenarios_categorized.csv". These 
             destination.location.z = 200
             destination = destination.location
 ```
-- you may want to save your file in the same location as 'manual_control.py' provided by the scenario runner
+- you may want to save (or overwrite) your file in the same location as 'carla/PythonAPI/examples/automatic_control.py' provided by the carla repository
 - run the scenario:
 
 	```cd ~scenario-runner-root```
 	```python scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld --waitForEgo```
 
-- open another console and start the automatic control:
+- open another console and inject the autonomous agent:
 
 	```python automatic_control.py```	
 

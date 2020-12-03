@@ -12,7 +12,7 @@
 
 eval results:
 
-![alt text](results.png)
+![results](results.png)
 
 - We need to adjust the model training to get classification of unsafe/safe (since not provided in results)
     
