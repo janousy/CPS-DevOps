@@ -32,34 +32,34 @@ FollowLeadingVehicle_5,"x=""-337  "" y=""435.8"" z=""5.5"" yaw=""0""",1,0,0,1,2,
 FollowLeadingVehicleWithObstacle_5,"x=""-337  "" y=""435.8"" z=""5.5"" yaw=""0""",1,0,0,1,3,proper break,2
 FollowLeadingVehicle_6,"x=""44.8"" y=""-98.3"" z=""3"" yaw=""-18""",1,0,0,1,2,good following,2
 FollowLeadingVehicleWithObstacle_6,"x=""44.8"" y=""-98.3"" z=""3"" yaw=""-18""",1,0,0,1,3,good break and following,2
-FollowLeadingVehicle_7,"x=""44.8"" y=""-98.3"" z=""0"" yaw=""-18""",1,0,0,0,2,good following,2
+FollowLeadingVehicle_7,"x=""44.8"" y=""-98.3"" z=""3" yaw=""-18""",1,0,0,0,2,good following,2
 FollowLeadingVehicleWithObstacle_7,"x=""178"" y=""-395.8"" z=""3"" yaw=""180""",1,0,0,0,3,fatal crash into wall,0
-FollowLeadingVehicle_8,"x=""178"" y=""-395.8"" z=""3"" yaw=""180""",1,0,1,0,3,Changed lane,2
+FollowLeadingVehicle_8,"x=""178"" y=""-395.8"" z=""3"" yaw=""180""",1,0,1,0,2,Changed lane,2
 FollowLeadingVehicleWithObstacle_8,"x=""170.6"" y=""-182"" z=""3"" yaw=""-136""",1,0,1,0,3,Changed lane,2
 FollowLeadingVehicle_9,"x=""170.6"" y=""-182.0"" z=""3"" yaw=""-137""",1,1,0,0,2,followed nicely,2
 FollowLeadingVehicleWithObstacle_9,"x=""-150"" y=""-190"" z=""11"" yaw=""1""",1,0,1,0,3,Changed lane,2
 FollowLeadingVehicle_10,"x=""-150"" y=""-190"" z=""11"" yaw=""3""",1,0,0,0,2,Crossed red light,0
 FollowLeadingVehicleWithObstacle_10,"x=""-141"" y=""208.5"" z=""9"" yaw=""0""",1,0,0,1,3,Success,2
 FollowLeadingVehicle_11,"x=""-141"" y=""208.5"" z=""9"" yaw=""0""",1,1,0,1,2,good following,2
-FollowLeadingVehicleWithObstacle_11,"x=""137"" y=""105.3"" z=""0.4"" yaw=""180""",1,1,0,1,3,good break and follow,2
+FollowLeadingVehicleWithObstacle_11,"x=""137"" y=""105.3"" z=""3"" yaw=""180""",1,1,0,1,3,good break and follow,2
 ,,,,,,,,
-FreeRide_1,"x=""312"" y=""129"" z=""0"" yaw=""180""",0,,,,,,
-FreeRide_2,"x=""132"" y=""215"" z=""0"" yaw=""90""",0,,,,,,
-FreeRide_3,"x=""207"" y=""59"" z=""0"" yaw=""180""",1,1,1,1,0,free ride in city without any obstacles,2
-FreeRide_4,"x=""269"" y=""-246"" z=""0"" yaw=""0""",0,,,,,,
+FreeRide_1,"x=""312"" y=""129"" z=""3"" yaw=""180""",1,1,0,1,0,free ride in village without any obstacles,2
+FreeRide_2,"x=""132"" y=""215"" z=""3"" yaw=""90""",1,1,0,1,0,free ride in village without any obstacles,2
+FreeRide_3,"x=""207"" y=""59"" z=""3"" yaw=""180""",1,1,1,1,0,free ride in city without any obstacles,2
+FreeRide_4,"x=""269"" y=""-246"" z=""3"" yaw=""0""",1,1,0,1,0,Car doesnt move,0
 MultiEgo_1,"x=""270"" y=""129"" z=""0"" yaw=""180"", x=""100"" y=""133"" z=""0"" yaw=""0""",0,,,,,unable to spawn multiple autonomous agents,
 MultiEgo_2,"x=""207"" y=""59"" z=""0"" yaw=""180"", x=""237"" y=""-95.0754252474"" z=""0"" ",0,,,,,unable to spawn multiple autonomous agents,
 ,,,,,,,,
-OtherLeadingVehicle_1,"x=""388.9"" y=""-140"" z=""0"" yaw=""90""",0,,,,,,
-OtherLeadingVehicle_2,"x=""-510"" y=""88"" z=""0"" yaw=""91""",0,,,,,,
-OtherLeadingVehicle_3,"x=""82"" y=""249.1"" z=""0"" yaw=""-33""",0,,,,,,
-OtherLeadingVehicle_4,"x=""138.9"" y=""34.9"" z=""10"" yaw=""1""",1,0,1,0,2,"successfull lane change, cannot follow vehicle",1
-OtherLeadingVehicle_5,"x=""-110"" y=""9.1"" z=""9.5"" yaw=""180""",0,,,,,,
-OtherLeadingVehicle_6,"x=""-12.5"" y=""-17"" z=""0"" yaw=""90""",0,,,,,,
-OtherLeadingVehicle_7,"x=""125.5"" y=""225.1"" z=""0"" yaw=""-25""",0,,,,,,
-OtherLeadingVehicle_8,"x=""-226.9"" y=""100"" z=""11"" yaw=""-88""",0,,,,,,
-OtherLeadingVehicle_9,"x=""-10"" y=""191.1"" z=""3"" yaw=""-180""",0,,,,,,
-OtherLeadingVehicle_10,"x=""188.9"" y=""-100"" z=""0"" yaw=""90""",0,,,,,,
+OtherLeadingVehicle_1,"x=""388.9"" y=""-140"" z=""3"" yaw=""90""",1,0,0,1,2,following 2 cars good,2
+OtherLeadingVehicle_2,"x=""-510"" y=""88"" z=""3"" yaw=""91""",1,0,1,1,2,changes lane,2
+OtherLeadingVehicle_3,"x=""82"" y=""249.1"" z=""3"" yaw=""-33""",1,0,0,1,2,drives slow,2
+OtherLeadingVehicle_4,"x=""138.9"" y=""34.9"" z=""11"" yaw=""1""",1,0,1,0,2,"successfull lane change, cannot follow vehicle",1
+OtherLeadingVehicle_5,"x=""-110"" y=""9.1"" z=""9.5"" yaw=""180""",0,,,,,Scenario not loadable,
+OtherLeadingVehicle_6,"x=""-12.5"" y=""-17"" z=""3"" yaw=""90""",1,0,1,0,2,Changes lane,2
+OtherLeadingVehicle_7,"x=""125.5"" y=""225.1"" z=""3"" yaw=""-25""",1,0,0,0,2,drives slow,2
+OtherLeadingVehicle_8,"x=""-226.9"" y=""100"" z=""11"" yaw=""-88""",1,0,0,0,2,drives slow,2
+OtherLeadingVehicle_9,"x=""-10"" y=""191.1"" z=""3"" yaw=""-180""",1,0,0,1,2,changes lane,2
+OtherLeadingVehicle_10,"x=""188.9"" y=""-100"" z=""3"" yaw=""90""",1,0,0,0,2,drives slow,2
 ,,,,,,,,
 NoSignalJunctionCrossing,"x=""-74.32"" y=""-50"" z=""0.5"" yaw=""270""",1,1,0,1,2,"successfull stop at junction, while other vehicle crossing ",2
 StationaryObjectCrossing_1,"x=""7.63"" y=""109.91"" z=""1.22"" yaw=""359""",1,0,0,0,1,crashes static object and keeps on driving,0
