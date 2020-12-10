@@ -32,7 +32,7 @@ FollowLeadingVehicle_5,"x=""-337  "" y=""435.8"" z=""5.5"" yaw=""0""",1,0,0,1,2,
 FollowLeadingVehicleWithObstacle_5,"x=""-337  "" y=""435.8"" z=""5.5"" yaw=""0""",1,0,0,1,3,proper break,2
 FollowLeadingVehicle_6,"x=""44.8"" y=""-98.3"" z=""3"" yaw=""-18""",1,0,0,1,2,good following,2
 FollowLeadingVehicleWithObstacle_6,"x=""44.8"" y=""-98.3"" z=""3"" yaw=""-18""",1,0,0,1,3,good break and following,2
-FollowLeadingVehicle_7,"x=""44.8"" y=""-98.3"" z=""3" yaw=""-18""",1,0,0,0,2,good following,2
+FollowLeadingVehicle_7,"x=""44.8"" y=""-98.3"" z=""3"" yaw=""-18""",1,0,0,0,2,good following,2
 FollowLeadingVehicleWithObstacle_7,"x=""178"" y=""-395.8"" z=""3"" yaw=""180""",1,0,0,0,3,fatal crash into wall,0
 FollowLeadingVehicle_8,"x=""178"" y=""-395.8"" z=""3"" yaw=""180""",1,0,1,0,2,Changed lane,2
 FollowLeadingVehicleWithObstacle_8,"x=""170.6"" y=""-182"" z=""3"" yaw=""-136""",1,0,1,0,3,Changed lane,2
