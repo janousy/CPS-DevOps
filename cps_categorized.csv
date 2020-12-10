@@ -33,15 +33,15 @@ FollowLeadingVehicleWithObstacle_5,"x=""-337  "" y=""435.8"" z=""5.5"" yaw=""0""
 FollowLeadingVehicle_6,"x=""44.8"" y=""-98.3"" z=""3"" yaw=""-18""",1,0,0,1,2,good following,2
 FollowLeadingVehicleWithObstacle_6,"x=""44.8"" y=""-98.3"" z=""3"" yaw=""-18""",1,0,0,1,3,good break and following,2
 FollowLeadingVehicle_7,"x=""44.8"" y=""-98.3"" z=""0"" yaw=""-18""",,,,,,,
-FollowLeadingVehicleWithObstacle_7,"x=""178"" y=""-395.8"" z=""0"" yaw=""180""",,,,,,,
-FollowLeadingVehicle_8,"x=""178"" y=""-395.8"" z=""0"" yaw=""180""",,,,,,,
-FollowLeadingVehicleWithObstacle_8,"x=""170.6"" y=""-182"" z=""0"" yaw=""-136""",,,,,,,
+FollowLeadingVehicleWithObstacle_7,"x=""178"" y=""-395.8"" z=""3"" yaw=""180""",1,0,0,0,3,fatal crash into wall,0
+FollowLeadingVehicle_8,"x=""178"" y=""-395.8"" z=""3"" yaw=""180""",1,0,1,0,3,Changed lane,2
+FollowLeadingVehicleWithObstacle_8,"x=""170.6"" y=""-182"" z=""0"" yaw=""-136""",1,0,1,0,3,Changed lane,2
 FollowLeadingVehicle_9,"x=""170.6"" y=""-182.0"" z=""0"" yaw=""-137""",,,,,,,
-FollowLeadingVehicleWithObstacle_9,"x=""-150"" y=""-190"" z=""11"" yaw=""1""",,,,,,,
+FollowLeadingVehicleWithObstacle_9,"x=""-150"" y=""-190"" z=""11"" yaw=""1""",1,0,1,0,3,Changed lane,2
 FollowLeadingVehicle_10,"x=""-150"" y=""-190"" z=""11"" yaw=""1""",,,,,,,
-FollowLeadingVehicleWithObstacle_10,"x=""-141"" y=""208.5"" z=""9"" yaw=""0""",,,,,,,
+FollowLeadingVehicleWithObstacle_10,"x=""-141"" y=""208.5"" z=""9"" yaw=""0""",1,0,0,1,3,Success,2
 FollowLeadingVehicle_11,"x=""-141"" y=""208.5"" z=""9"" yaw=""0""",,,,,,,
-FollowLeadingVehicleWithObstacle_11,"x=""137"" y=""105.3"" z=""0.4"" yaw=""180""",,,,,,,
+FollowLeadingVehicleWithObstacle_11,"x=""137"" y=""105.3"" z=""0.4"" yaw=""180""",1,1,0,1,3,good break and follow,2
 ,,,,,,,,
 FreeRide_1,"x=""312"" y=""129"" z=""0"" yaw=""180""",0,,,,,,
 FreeRide_2,"x=""132"" y=""215"" z=""0"" yaw=""90""",0,,,,,,
