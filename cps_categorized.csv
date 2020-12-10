@@ -5,16 +5,16 @@ ChangeLane_2,"x=""107"" y=""133.5"" z=""0.5"" yaw=""0""",1,0,1,0,2,collision wit
 ControlLoss_1,"x=""392.5"" y=""195"" z=""0.5"" yaw=""90""",1,1,0,0,1,no inference,2
 ControlLoss_2,"x=""-2.0"" y=""160"" z=""0.5"" yaw=""90""",1,1,0,0,1,no inference,2
 ControlLoss_3,"x=""168.9"" y=""59.8"" z=""0.5"" yaw=""0",1,1,0,0,1,no inference,2
-ControlLoss_4,"x=""27"" y=""110"" z=""0.22"" yaw=""0""",0,,,,,,
+ControlLoss_4,"x=""27"" y=""110"" z=""3"" yaw=""0""",1,1,0,0,0,no inference, 2
 ControlLoss_5,"x=""54.8"" y=""307.2"" z=""0.22"" yaw=""0""",1,1,1,0,0,no inference,2
 ControlLoss_6,"x=""57.4"" y=""191.7"" z=""0.5"" yaw=""0""",1,0,0,0,1,no inference,2
 ControlLoss_7,"x=""15"" y=""207.5"" z=""2"" yaw=""0""",1,1,0,0,1,no inference,2
 ControlLoss_8,"x=""-74"" y=""-12"" z=""0.1"" yaw=""270""",1,1,0,0,1,no inference,2
 ControlLoss_9,"x=""-85.1"" y=""-87.4"" z=""0.3"" yaw=""89""",1,1,0,0,1,no inference,2
-ControlLoss_10,"x=""218.4"" y=""193"" z=""0"" yaw=""338""",0,,,,,,
-ControlLoss_11,"x=""-40.4"" y=""-229.5"" z=""0"" yaw=""131""",0,,,,,,
+ControlLoss_10,"x=""218.4"" y=""193"" z=""3"" yaw=""338""",1,0,0,0,1,no inference,2
+ControlLoss_11,"x=""-40.4"" y=""-229.5"" z=""3"" yaw=""131""",1,0,0,0,1,no inference,2
 ControlLoss_12,"x=""-45"" y=""37.2"" z=""11"" yaw=""0""",1,0,0,0,1,no inference,2
-ControlLoss_13,"x=""90.9"" y=""-66"" z=""0"" yaw=""67""",0,,,,,,
+ControlLoss_13,"x=""90.9"" y=""-66"" z=""3"" yaw=""67""",1,1,0,2,1,stayed at STOP forever,1
 ControlLoss_14,"x=""-54.7"" y=""110.9"" z=""0.1"" yaw=""90""",1,1,0,1,1,proper drive despite turn,2
 ControlLoss_15,"x=""119.1"" y=""-142.7"" z=""0.1"" yaw=""-170""",1,1,0,1,1,crossed lane at turn,1
 ,,,,,,,,
