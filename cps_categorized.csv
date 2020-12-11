@@ -112,13 +112,13 @@ VehicleTurningRight_2,"x=""132"" y=""195.5"" z=""3"" yaw=""180""",1,1,0,2,2,mino
 VehicleTurningLeft_2,"x=""132"" y=""195.5"" z=""3"" yaw=""180""",1,1,0,2,2,minor line cross,1
 VehicleTurningRight_3,"x=""282.5"" y=""199.4"" z=""3"" yaw=""3""",1,1,0,2,2,minor line cross,1
 VehicleTurningLeft_3,"x=""282.5"" y=""199.4"" z=""3"" yaw=""0""",1,1,0,2,2,good breaking,2
-VehicleTurningRight_4,"x=""30.1"" y=""187.4"" z=""3"" yaw=""180""",,,,,,,
+VehicleTurningRight_4,"x=""30.1"" y=""187.4"" z=""3"" yaw=""180""",1,1,0,2,2,minor line break,1
 VehicleTurningLeft_4,"x=""30.1"" y=""187.4"" z=""3"" yaw=""180""",1,1,0,2,2,minor line break,1
-VehicleTurningRight_5,"x=""90"" y=""237.1"" z=""3"" yaw=""180""",,,,,,,
+VehicleTurningRight_5,"x=""90"" y=""237.1"" z=""3"" yaw=""180""",1,1,0,2,2,minor line break,1
 VehicleTurningLeft_5,"x=""87.5"" y=""237.1"" z=""3"" yaw=""180""",1,1,0,2,2,minor line break,1
-VehicleTurningRight_6,"x=""146.2"" y=""191.7"" z=""3"" yaw=""0""",,,,,,,
+VehicleTurningRight_6,"x=""146.2"" y=""191.7"" z=""3"" yaw=""0""",1,1,0,2,2,minor line break,1
 VehicleTurningLeft_6,"x=""146.2"" y=""191.7"" z=""3"" yaw=""0""",1,1,0,2,2,pole crash,0
-VehicleTurningRight_7,"x=""-74.32"" y=""-50"" z=""3"" yaw=""270""",,,,,,,
-VehicleTurningLeft_7,"x=""-74.32"" y=""-50"" z=""3"" yaw=""270""",1,1,0,0,2,AI stops and doesnt drive,0
-VehicleTurningRight_8,"x=""255.2"" y=""-300.4"" z=""3"" yaw=""90""",,,,,,,
+VehicleTurningRight_7,"x=""-74.32"" y=""-50"" z=""3"" yaw=""270""",1,1,0,2,2,AI stops and doesnt drive,0
+VehicleTurningLeft_7,"x=""-74.32"" y=""-50"" z=""3"" yaw=""270""",1,1,0,2,2,AI stops and doesnt drive,0
+VehicleTurningRight_8,"x=""255.2"" y=""-300.4"" z=""3"" yaw=""90""",1,1,0,2,2,AI stops and doesnt drive,0
 VehicleTurningLeft_8,"x=""255.2"" y=""-300.4"" z=""3"" yaw=""90""",1,1,0,0,2,AI stops and doesnt drive,0
