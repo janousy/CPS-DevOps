@@ -93,7 +93,7 @@ OppositeVehicleRunningRedLight_5,"x=""-48"" y=""137"" z=""3"" yaw=""0""",1,1,0,2
 ,,,,,,,,
 SignalizedJunctionLeftTurn_1,"x=""-133.7"" y=""137.4"" z=""3"" yaw=""0""",1,1,0,2,2,small line break and close collision,1
 SignalizedJunctionLeftTurn_2,"x=""311.4"" y=""-220.2"" z=""3"" yaw=""90""",0,,,,,scenario_runner crashes,
-SignalizedJunctionLeftTurn_3,"x=""274.1"" y=""-246.2"" z=""3""" yaw=""0""",1,1,0,2,2,total crash,0
+SignalizedJunctionLeftTurn_3,"x=""274.1"" y=""-246.2"" z=""3"" yaw=""0""",1,1,0,2,2,total crash,0
 SignalizedJunctionLeftTurn_4,"x=""-145.5"" y=""-1"" z=""3"" yaw=""180""",1,1,0,2,2,total crash,0
 SignalizedJunctionLeftTurn_5,"x=""-76.5"" y=""-0.8"" z=""3"" yaw=""180""",1,1,0,2,2,total crash,0
 SignalizedJunctionLeftTurn_6,"x=""76.4"" y=""83"" z=""3"" yaw=""157""",1,1,0,2,2,total crash,0
