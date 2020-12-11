@@ -91,28 +91,28 @@ OppositeVehicleRunningRedLight_3,"x=""-2.8"" y=""-184"" z=""3"" yaw=""90""",1,1,
 OppositeVehicleRunningRedLight_4,"x=""69"" y=""128"" z=""3"" yaw=""180""",1,1,0,0,2,didnt break properly,1
 OppositeVehicleRunningRedLight_5,"x=""-48"" y=""137"" z=""3"" yaw=""0""",1,1,0,2,2,good,2
 ,,,,,,,,
-SignalizedJunctionLeftTurn_1,"x=""-133.7"" y=""137.4"" z=""0.2"" yaw=""0""",,,,,,,
-SignalizedJunctionLeftTurn_2,"x=""311.4"" y=""-220.2"" z=""0.3"" yaw=""90""",,,,,,,
-SignalizedJunctionLeftTurn_3,"x=""274.1"" y=""-246.2"" z=""0.3""",,,,,,,
-SignalizedJunctionLeftTurn_4,"x=""-145.5"" y=""-1"" z=""0.3"" yaw=""180""",,,,,,,
-SignalizedJunctionLeftTurn_5,"x=""-76.5"" y=""-0.8"" z=""0.3"" yaw=""180""",,,,,,,
-SignalizedJunctionLeftTurn_6,"x=""76.4"" y=""83"" z=""0.3"" yaw=""157""",,,,,,,
+SignalizedJunctionLeftTurn_1,"x=""-133.7"" y=""137.4"" z=""3"" yaw=""0""",1,1,0,2,2,small line break and close collision,1
+SignalizedJunctionLeftTurn_2,"x=""311.4"" y=""-220.2"" z=""3"" yaw=""90""",0,,,,,scenario_runner crashes,
+SignalizedJunctionLeftTurn_3,"x=""274.1"" y=""-246.2"" z=""3""" yaw=""0""",1,1,0,2,2,total crash,0
+SignalizedJunctionLeftTurn_4,"x=""-145.5"" y=""-1"" z=""3"" yaw=""180""",1,1,0,2,2,total crash,0
+SignalizedJunctionLeftTurn_5,"x=""-76.5"" y=""-0.8"" z=""3"" yaw=""180""",1,1,0,2,2,total crash,0
+SignalizedJunctionLeftTurn_6,"x=""76.4"" y=""83"" z=""3"" yaw=""157""",1,1,0,2,2,total crash,0
 ,,,,,,,,
-SignalizedJunctionRightTurn_1,"x=""53"" y=""128.1"" z=""1"" yaw=""178""",,,,,,,
-SignalizedJunctionRightTurn_2,"x=""244.7"" y=""-249.4"" z=""1"" yaw=""180""",,,,,,,
-SignalizedJunctionRightTurn_3,"x=""250"" y=""-311"" z=""0.1"" yaw=""-179""",,,,,,,
-SignalizedJunctionRightTurn_4,"x=""-50.4"" y=""25.3"" z=""0.1"" yaw=""92""",,,,,,,
-SignalizedJunctionRightTurn_5,"x=""-25.7"" y=""95"" z=""0.0"" yaw=""1""",,,,,,,
-SignalizedJunctionRightTurn_6,"x=""72.2"" y=""-92.6"" z=""0.0"" yaw=""-163""",,,,,,,
-SignalizedJunctionRightTurn_7,"x=""-175.3"" y=""94.9"" z=""0.0"" yaw=""0""",,,,,,,
+SignalizedJunctionRightTurn_1,"x=""53"" y=""128.1"" z=""1"" yaw=""178""",0,,,,,scenario_runner breaks,
+SignalizedJunctionRightTurn_2,"x=""244.7"" y=""-249.4"" z=""1"" yaw=""180""",0,,,,,automatic_control doesnt drive,
+SignalizedJunctionRightTurn_3,"x=""250"" y=""-311"" z=""3"" yaw=""-179""",0,,,,,scenario runner breaks,
+SignalizedJunctionRightTurn_4,"x=""-50.4"" y=""25.3"" z=""3"" yaw=""92""",1,1,0,2,2,good breaking,2
+SignalizedJunctionRightTurn_5,"x=""-25.7"" y=""95"" z=""3"" yaw=""1""",1,1,0,2,2,crossed line and close to crash,1
+SignalizedJunctionRightTurn_6,"x=""72.2"" y=""-92.6"" z=""3"" yaw=""-163""",1,1,0,2,2,good,2
+SignalizedJunctionRightTurn_7,"x=""-175.3"" y=""94.9"" z=""3"" yaw=""0""",0,,,,,scenario_runner breaks,
 ,,,,,,,,
-VehicleTurningRight_1,"x=""130"" y=""55"" z=""3"" yaw=""180""",,,,,,,
+VehicleTurningRight_1,"x=""130"" y=""55"" z=""3"" yaw=""180""",1,1,0,2,2,doesnt collide,2
 VehicleTurningLeft_1,"x=""130"" y=""55"" z=""3"" yaw=""180""",1,1,0,2,2,breaks for bicycle,2
-VehicleTurningRight_2,"x=""132"" y=""195.5"" z=""0"" yaw=""180""",,,,,,,
-VehicleTurningLeft_2,"x=""132"" y=""195.5"" z=""0"" yaw=""180""",,,,,,,
-VehicleTurningRight_3,"x=""282.5"" y=""199.4"" z=""0"" yaw=""0""",,,,,,,
+VehicleTurningRight_2,"x=""132"" y=""195.5"" z=""3"" yaw=""180""",1,1,0,2,2,minor line cross,1
+VehicleTurningLeft_2,"x=""132"" y=""195.5"" z=""3"" yaw=""180""",,,,,,,
+VehicleTurningRight_3,"x=""282.5"" y=""199.4"" z=""3"" yaw=""3""",1,1,0,2,2,minor line cross,1
 VehicleTurningLeft_3,"x=""282.5"" y=""199.4"" z=""0"" yaw=""0""",,,,,,,
-VehicleTurningRight_4,"x=""30.1"" y=""187.4"" z=""0.22"" yaw=""180""",,,,,,,
+VehicleTurningRight_4,"x=""30.1"" y=""187.4"" z=""3"" yaw=""180""",,,,,,,
 VehicleTurningLeft_4,"x=""30.1"" y=""187.4"" z=""0.22"" yaw=""180""",,,,,,,
 VehicleTurningRight_5,"x=""90"" y=""237.1"" z=""0.22"" yaw=""180""",,,,,,,
 VehicleTurningLeft_5,"x=""87.5"" y=""237.1"" z=""0.22"" yaw=""180""",,,,,,,
