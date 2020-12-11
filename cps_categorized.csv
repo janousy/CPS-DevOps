@@ -81,15 +81,15 @@ DynamicObjectCrossing_8,"x=""138.2"" y=""116.4"" z=""3"" yaw=""130""",1,1,0,1,2,
 DynamicObjectCrossing_9,"x=""90"" y=""129"" z=""3"" yaw=""180""",1,1,0,0,2,ignores pedestrian,1
 ,,,,,,,,
 ManeuverOppositeDirection_1,"x=""17"" y=""136"" z=""3"" yaw=""0""",0,,,,,Scenario_runner crashes,
-ManeuverOppositeDirection_2,"x=""63.3"" y=""-190.3"" z=""2"" yaw=""270""",,,,,,,
-ManeuverOppositeDirection_3,"x=""192"" y=""-311.5"" z=""2"" yaw=""180""",,,,,,,
-ManeuverOppositeDirection_4,"x=""94"" y=""144.7"" z=""2"" yaw=""-19""",,,,,,,
+ManeuverOppositeDirection_2,"x=""63.3"" y=""-190.3"" z=""3"" yaw=""270""",1,1,1,0,3,crashes into static object,0
+ManeuverOppositeDirection_3,"x=""192"" y=""-311.5"" z=""3"" yaw=""180""",0,,,,,Scenario_runner crashes,
+ManeuverOppositeDirection_4,"x=""97"" y=""147"" z=""2"" yaw=""-20""",1,1,1,1,3,Crashes into static object,0
 ,,,,,,,,
-OppositeVehicleRunningRedLight_1,"x=""126.4"" y=""55.2"" z=""1"" yaw=""180""",,,,,,,
-OppositeVehicleRunningRedLight_2,"x=""-3"" y=""250"" z=""1"" yaw=""270""",,,,,,,
-OppositeVehicleRunningRedLight_3,"x=""-2.8"" y=""-184"" z=""1"" yaw=""90""",,,,,,,
-OppositeVehicleRunningRedLight_4,"x=""69"" y=""128"" z=""1"" yaw=""180""",,,,,,,
-OppositeVehicleRunningRedLight_5,"x=""-48"" y=""137"" z=""1"" yaw=""0""",,,,,,,
+OppositeVehicleRunningRedLight_1,"x=""126.4"" y=""55.2"" z=""3"" yaw=""180""",1,1,0,2,2,Crashes into car,0
+OppositeVehicleRunningRedLight_2,"x=""-3"" y=""250"" z=""3"" yaw=""270""",1,1,0,2,2,Crosses line,1
+OppositeVehicleRunningRedLight_3,"x=""-2.8"" y=""-184"" z=""3"" yaw=""90""",1,1,0,0,2,drived slow,2
+OppositeVehicleRunningRedLight_4,"x=""69"" y=""128"" z=""3"" yaw=""180""",1,1,0,0,2,didnt break properly,1
+OppositeVehicleRunningRedLight_5,"x=""-48"" y=""137"" z=""3"" yaw=""0""",1,1,0,2,2,good,2
 ,,,,,,,,
 SignalizedJunctionLeftTurn_1,"x=""-133.7"" y=""137.4"" z=""0.2"" yaw=""0""",,,,,,,
 SignalizedJunctionLeftTurn_2,"x=""311.4"" y=""-220.2"" z=""0.3"" yaw=""90""",,,,,,,
