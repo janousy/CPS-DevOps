@@ -146,40 +146,29 @@ You can find available scenarios in the file "scenarios_categorized.csv". These 
 
 # Scenario Classification
 
-The following list was used to evaluate executed scenarios together with our AI agent:
+The following list was used to evaluate executed scenarios together with our AI agent. The full list with possible levels for each aspect is available [here](https://github.com/janousy/CPS-DevOps/blob/main/simulator/checklist.md) with . Each scenario was executed manually at least once, with adjusted spawn coordinates.
 
-valid:
+Criterium    | Description
+------------ | ------------------------------------------------------------------------------------------------------------------------------------------
+validity     | describes whether the provided scenario was executable. As an example, some spawn points were invalid to due being occupied by other items
+city         | whether the scenario takes place inside or outside the city
+lane change  | is there a lane change required, e.g. due to an object on the street or or because of overtaking a vehicle
+turn         | is the vehicle required to perform a turn or does the road have curvature
+safety level | dynamic or static objects included in the scenario
+success      | does the AI agent successfully run through the scenario
 
-- 0: unable to run scenario
-- 1: able to run scenario
+All results obtained from the respective scenarios can be found as a CSV [here](https://github.com/janousy/CPS-DevOps/blob/main/simulator/cps_categorized.csv) in this repository.
 
-city:
+# Future Work
 
-- 0: not in city environment
-- 1: city environment
+**Improvements to the AI agent:**<br>
+Currently, executing a scenario is rather inefficient since the spawn points for each scenario need to be adjusted manually in the AI agent's python file. Refactoring the agent and then reading the spawn coordinates from a file indexed by scenario name would make the process a lot more efficient. Additionally, having a more sophisticated AI would make the evaluation of scenarios more meaningful
 
-lane change:
+**Compatibility of Scenarios and agents:**<br>
+As a baseline for our AI agent, we chose the pre-built one from Carla due to time restriction. Authors of the ScenarioRunner do not recommend this procedure. Moreover, this configuration makes running scenarios error prone, for example due to spawn points being occupied. The ScenarioRunner project itself also provides an AI agent which can be extended. More detail on this can be found in the documentation of the [Carla Challenge](https://carlachallenge.org/get-started/). However, building an autonomous agent was not within the scope of our project.
 
-- 0: lane change not required
-- 1: lane change required
+**Extension of Classification Criteria**<br>
+Since our agent was not very sophisticated, it was hard to obtain meaningful results during the evaluation. With a more intelligent AI and better configuration, more criteria could be used for evaluation, e.g. whether and traffic rate.
 
-turn:
-
-- 0: no turn
-- 1: curve ( < 90 degrees)
-- 2: hard turn (e.g. at intersection)
-
-safety level:
-
-- 0: no objects
-- 1: static object(s)
-- 2: dynamic objects
-- 3: multiply dynamic (and static) objects
-
-success:
-
-- 0: no success (e.g. collision)
-- 1: success with minor difficulties (e.g. accidental lane crossing)
-- 2: complete success
-
-All results obtained from the respective scenarios can be found as a CSV [here]()
+**Custom Scenarios**<br>
+Again due to time restrictions, we did not build our own scenarios. Simpler scenarios would eventually make the evaulation more meaningful. The ScenarioRunner [documentation](https://carla-scenariorunner.readthedocs.io/en/latest/creating_new_scenario/) helps developers build custom scenarios.
