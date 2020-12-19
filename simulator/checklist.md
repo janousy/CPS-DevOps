@@ -1,4 +1,4 @@
-valid:
+validity:
 
 - 0: unable to run scenario
 - 1: able to run scenario
