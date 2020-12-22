@@ -129,12 +129,12 @@ You can find available scenarios in the file "scenarios_categorized.csv". These 
 
   `python automatic_control.py`
 
-- We modified the automatic_control.py such that the location, the spawn_point and the car is no longer randomly set. After starting the script it will ask you which scenario you want to use.
-- Spawn point gets automatically written from our "scenarios_categorized.csv". Set an appropriate destination point (x,y,z) far from your spawn point since it will de-spawn as soon as it reached its destination (before the scenario_runner ends).
-- We provide a default destination point: 300,300,300, which works almost everytime for all scenario with no intersection. Alternatively you can set it by your own in the command line.
-- Attention: It is possible that your defined destination point causes the AI to turn right at an intersection to reach the destination but the scenario wants it to turn left (SignalizedJunctionLeftTurn_1). In this case it is recommended to set the destination point to the complete opposite direction as it often solves the problem. (-300,-300,-300)
-- The car is set to number 25 for all scenarios from our vehicles.csv.
-- The scenario_runner will independently stop if the scenario is over. The AI keeps driving until it reaches its target. You can stop further driving by hitting the ESC key.
+- we modified the automatic_control.py such that the spawn point, the destination and the car is no longer randomly set. After starting the script it will ask you which scenario you want to use.
+- the spawn point gets automatically collected from our "scenarios_categorized.csv". Set an appropriate destination point (x,y,z) far from the spawn point since it will de-spawn as soon as it reached its destination (before the scenario_runner ends).
+- we provide a default destination point: x=300, y=300, z=300, which works almost everytime for all scenarios with no intersection. 
+- attention: it is possible that your defined destination point causes the AI to turn right at an intersection to reach the destination but the scenario wants it to turn left (SignalizedJunctionLeftTurn_1). In this case it is recommended to set the destination point by your own to the complete opposite direction as it often solves the problem. (x=-300, y=-300,z =-300)
+- the car is set to lincoln	mkz2017 for all scenarios that got evaluated.
+- the scenario_runner will independently stop if the scenario is over. The AI keeps driving until it reaches its target. You can stop further driving by hitting the ESC key.
 # Scenario Classification
 
 The following list was used to evaluate executed scenarios together with our AI agent. The full list with possible levels for each aspect is available [here](https://github.com/janousy/CPS-DevOps/blob/main/simulator/checklist.md) with . Each scenario was executed manually at least once, with adjusted spawn coordinates.
