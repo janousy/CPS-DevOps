@@ -21,6 +21,9 @@ import random
 import re
 import sys
 import weakref
+# Start Modded imports
+import csv, urllib.request
+# End Modded imports
 
 try:
     import pygame
@@ -71,7 +74,9 @@ from agents.navigation.basic_agent import BasicAgent  # pylint: disable=import-e
 def find_weather_presets():
     """Method to find weather presets"""
     rgx = re.compile('.+?(?:(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])|$)')
+
     def name(x): return ' '.join(m.group(0) for m in rgx.finditer(x))
+
     presets = [x for x in dir(carla.WeatherParameters) if re.match('[A-Z].+', x)]
     return [(getattr(carla.WeatherParameters, x), name(x)) for x in presets]
 
@@ -80,6 +85,31 @@ def get_actor_display_name(actor, truncate=250):
     """Method to get actor display name"""
     name = ' '.join(actor.type_id.replace('_', '.').title().split('.')[1:])
     return (name[:truncate - 1] + u'\u2026') if len(name) > truncate else name
+
+
+# Start Modded Area
+location = input('Random Location?\n y/n:  ')
+if location == 'y':
+    print('Set to random location')
+    random_location = True
+else:
+    random_location = False
+destination_point = input('Random Destination?\n y/n:  ')
+if destination_point == 'y':
+    print('Set to random destination')
+    random_destination = True
+else:
+    random_destination = False
+url = 'https://raw.githubusercontent.com/janousy/CPS-DevOps/main/simulator/vehicles.csv'
+response = urllib.request.urlopen(url)
+lines = [l.decode('utf-8') for l in response.readlines()]
+cr = csv.reader(lines)
+for row in cr:
+    print(row)
+print('Default car for scenarios: Nr.25 Lincoln')
+car_blueprint = input('Choose a car number: ')
+
+# End Modded Area
 
 
 # ==============================================================================
@@ -122,11 +152,11 @@ class World(object):
         # Set the seed if requested by user
         if args.seed is not None:
             random.seed(args.seed)
-        # Modded Area
-        # Get a random blueprint.
-        # blueprint = random.choice(self.world.get_blueprint_library().filter(self._actor_filter))
-        blueprint = self.world.get_blueprint_library().filter(self._actor_filter)[25]
+
+        # Start Modded Area
+        blueprint = self.world.get_blueprint_library().filter(self._actor_filter)[int(car_blueprint)]
         print(blueprint)
+        # End Modded Area
         blueprint.set_attribute('role_name', 'hero')
         if blueprint.has_attribute('color'):
             color = random.choice(blueprint.get_attribute('color').recommended_values)
@@ -147,18 +177,18 @@ class World(object):
                 print('Please add some Vehicle Spawn Point to your UE4 scene.')
                 sys.exit(1)
 
-            # Modded AREA:
-
-            # spawn_points = self.map.get_spawn_points()
-
-            spawn_point = self.map.get_spawn_points()[0]
-            spawn_point.location.x = 53
-            spawn_point.location.y = 128.1
-            spawn_point.location.z = 1
-            spawn_point.rotation.yaw = 178
+            # Start Modded Area:
+            if random_location:
+                spawn_point = self.map.get_spawn_points()[0]
+            else:
+                spawn_point = self.map.get_spawn_points()[0]
+                spawn_point.location.x = int(input('x='))
+                spawn_point.location.y = int(input('y='))
+                spawn_point.location.z = int(input('z='))
+                spawn_point.rotation.yaw = int(input('yaw='))
+            # End Modded Area
 
             self.player = self.world.try_spawn_actor(blueprint, spawn_point)
-            # END Modded Area
 
         # Set up the sensors.
         self.collision_sensor = CollisionSensor(self.player, self.hud)
@@ -228,6 +258,7 @@ class KeyboardControl(object):
         """Shortcut for quitting"""
         return (key == K_ESCAPE) or (key == K_q and pygame.key.get_mods() & KMOD_CTRL)
 
+
 # ==============================================================================
 # -- HUD -----------------------------------------------------------------------
 # ==============================================================================
@@ -288,7 +319,7 @@ class HUD(object):
             'Map:     % 20s' % world.map.name,
             'Simulation time: % 12s' % datetime.timedelta(seconds=int(self.simulation_time)),
             '',
-            'Speed:   % 15.0f km/h' % (3.6 * math.sqrt(vel.x**2 + vel.y**2 + vel.z**2)),
+            'Speed:   % 15.0f km/h' % (3.6 * math.sqrt(vel.x ** 2 + vel.y ** 2 + vel.z ** 2)),
             u'Heading:% 16.0f\N{DEGREE SIGN} % 2s' % (transform.rotation.yaw, heading),
             'Location:% 20s' % ('(% 5.1f, % 5.1f)' % (transform.location.x, transform.location.y)),
             'GNSS:% 24s' % ('(% 2.6f, % 3.6f)' % (world.gnss_sensor.lat, world.gnss_sensor.lon)),
@@ -318,8 +349,9 @@ class HUD(object):
             self._info_text += ['Nearby vehicles:']
 
         def dist(l):
-            return math.sqrt((l.x - transform.location.x)**2 + (l.y - transform.location.y)
-                             ** 2 + (l.z - transform.location.z)**2)
+            return math.sqrt((l.x - transform.location.x) ** 2 + (l.y - transform.location.y)
+                             ** 2 + (l.z - transform.location.z) ** 2)
+
         vehicles = [(dist(x.get_location()), x) for x in vehicles if x.id != world.player.id]
 
         for dist, vehicle in sorted(vehicles):
@@ -380,6 +412,7 @@ class HUD(object):
         self._notifications.render(display)
         self.help.render(display)
 
+
 # ==============================================================================
 # -- FadingText ----------------------------------------------------------------
 # ==============================================================================
@@ -414,6 +447,7 @@ class FadingText(object):
         """Render fading text method"""
         display.blit(self.surface, self.pos)
 
+
 # ==============================================================================
 # -- HelpText ------------------------------------------------------------------
 # ==============================================================================
@@ -445,6 +479,7 @@ class HelpText(object):
         """Render help text method"""
         if self._render:
             display.blit(self.surface, self.pos)
+
 
 # ==============================================================================
 # -- CollisionSensor -----------------------------------------------------------
@@ -489,6 +524,7 @@ class CollisionSensor(object):
         if len(self.history) > 4000:
             self.history.pop(0)
 
+
 # ==============================================================================
 # -- LaneInvasionSensor --------------------------------------------------------
 # ==============================================================================
@@ -519,6 +555,7 @@ class LaneInvasionSensor(object):
         lane_types = set(x.type for x in event.crossed_lane_markings)
         text = ['%r' % str(x).split()[-1] for x in lane_types]
         self.hud.notification('Crossed line %s' % ' and '.join(text))
+
 
 # ==============================================================================
 # -- GnssSensor --------------------------------------------------------
@@ -551,6 +588,7 @@ class GnssSensor(object):
             return
         self.lat = event.latitude
         self.lon = event.longitude
+
 
 # ==============================================================================
 # -- CameraManager -------------------------------------------------------------
@@ -613,7 +651,7 @@ class CameraManager(object):
         """Set a sensor"""
         index = index % len(self.sensors)
         needs_respawn = True if self.index is None else (
-            force_respawn or (self.sensors[index][0] != self.sensors[self.index][0]))
+                force_respawn or (self.sensors[index][0] != self.sensors[self.index][0]))
         if needs_respawn:
             if self.sensor is not None:
                 self.sensor.destroy()
@@ -674,6 +712,7 @@ class CameraManager(object):
         if self.recording:
             image.save_to_disk('_out/%08d' % image.frame)
 
+
 # ==============================================================================
 # -- Game Loop ---------------------------------------------------------
 # ==============================================================================
@@ -713,19 +752,25 @@ def game_loop(args):
             spawn_points = world.map.get_spawn_points()
             random.shuffle(spawn_points)
 
-            # Modded Area
-            # if spawn_points[0].location != agent.vehicle.get_location():
-            #     destination = spawn_points[0].location
-            # else:
-            #     destination = spawn_points[1].location
-            destination = spawn_points[0]
-            destination.location.x = 145
-            destination.location.y = 200
-            destination.location.z = 200
-            destination = destination.location
+            # Start Modded Area
+            if random_destination:
+                if spawn_points[0].location != agent.vehicle.get_location():
+                    destination = spawn_points[0].location
+                else:
+                    destination = spawn_points[1].location
+            else:
+                destination = spawn_points[0]
+                print('Recommended destination points for scenarios are: (300,300,300), (-300,-300,-300)\n' +
+                      'Depending on destination point, the AI will turn left or right or might even change lane to' +
+                      ' reach target')
+                destination.location.x = int(input('x='))
+                destination.location.y = int(input('y='))
+                destination.location.z = int(input('z='))
+                destination = destination.location
             print(destination)
-            agent.set_destination(agent.vehicle.get_location(), destination, clean=True)
+            # End Modded Area
 
+            agent.set_destination(agent.vehicle.get_location(), destination, clean=True)
         clock = pygame.time.Clock()
         print(agent.vehicle.get_location())
         while True:
