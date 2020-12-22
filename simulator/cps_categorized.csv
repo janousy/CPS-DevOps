@@ -47,8 +47,8 @@ FreeRide_1,"x=""312"" y=""129"" z=""3"" yaw=""180"" ",1,1,0,1,0,free ride in vil
 FreeRide_2,"x=""132"" y=""215"" z=""3"" yaw=""90"" ",1,1,0,1,0,free ride in village without any obstacles,2
 FreeRide_3,"x=""207"" y=""59"" z=""3"" yaw=""180"" ",1,1,1,1,0,free ride in city without any obstacles,2
 FreeRide_4,"x=""269"" y=""-246"" z=""3"" yaw=""0"" ",1,1,0,1,0,Car doesnt move,0
-MultiEgo_1,"x=""270"" y=""129"" z=""0"" yaw=""180"" ", x=""100"" y=""133"" z=""0"" yaw=""0"" ",0,,,,,unable to spawn multiple autonomous agents,
-MultiEgo_2,"x=""207"" y=""59"" z=""0"" yaw=""180"" ", x=""237"" y=""-95.0754252474"" z=""0"" ,0,,,,,unable to spawn multiple autonomous agents,
+MultiEgo_1,"x=""270"" y=""129"" z=""0"" yaw=""180"", x=""100"" y=""133"" z=""0"" yaw=""0"" ",0,,,,,unable to spawn multiple autonomous agents,
+MultiEgo_2,"x=""207"" y=""59"" z=""0"" yaw=""180"", x=""237"" y=""-95.0754252474"" z=""0"" ",0,,,,,unable to spawn multiple autonomous agents,
 ,,,,,,,,
 OtherLeadingVehicle_1,"x=""388.9"" y=""-140"" z=""3"" yaw=""90"" ",1,0,0,1,2,following 2 cars good,2
 OtherLeadingVehicle_2,"x=""-510"" y=""88"" z=""3"" yaw=""91"" ",1,0,1,1,2,changes lane,2
