@@ -18,7 +18,7 @@ ControlLoss_13,"x=""90.9"" y=""-66"" z=""3"" yaw=""67"" ",1,1,0,2,1,stayed at ST
 ControlLoss_14,"x=""-54.7"" y=""110.9"" z=""0.1"" yaw=""90"" ",1,1,0,1,1,proper drive despite turn,2
 ControlLoss_15,"x=""119.1"" y=""-142.7"" z=""0.1"" yaw=""-170"" ",1,1,0,1,1,crossed lane at turn,1
 ,,,,,,,,
-CutInFrom_left_Lane,"x=""284.4"" y=""16.4"" z=""2.5"" yaw=""180"" " ,1,0,0,0,2,proper break,2
+CutInFrom_left_Lane,"x=""284.4"" y=""16.4"" z=""2.5"" yaw=""180"" ",1,0,0,0,2,proper break,2
 CutInFrom_right_Lane,"x=""284.4"" y=""16.4"" z=""2.5"" yaw=""180"" ",1,0,0,0,2,proper break,2
 ,,,,,,,,
 FollowLeadingVehicle_1,"x=""107"" y=""133"" z=""0.5"" yaw=""0"" ",1,1,0,0,2,proper break, does not actually follow vehicle,2
