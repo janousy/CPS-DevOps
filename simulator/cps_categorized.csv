@@ -1,5 +1,5 @@
 Name,Ego Vehicle Spawn Points,Valid,City,Lane Change,Turn,Safety Level,Observation,Success
-ChangeLane_1,"x=""284.4"" y=""16.4"" z=""2.5"" yaw=""-173"" ",1,0,1,0,2,does not execute required lane change, but breaks,1
+ChangeLane_1,"x=""284.4"" y=""16.4"" z=""2.5"" yaw=""-173"" ",1,0,1,0,2,does not execute required lane change but breaks,1
 ChangeLane_2,"x=""107"" y=""133.5"" z=""0.5"" yaw=""0"" ",1,0,1,0,2,collision with leading vehicle,0
 ,,,,,,,,
 ControlLoss_1,"x=""392.5"" y=""195"" z=""0.5"" yaw=""90"" ",1,1,0,0,1,no inference,2
@@ -53,7 +53,7 @@ MultiEgo_2,"x=""207"" y=""59"" z=""0"" yaw=""180"", x=""237"" y=""-95.0754252474
 OtherLeadingVehicle_1,"x=""388.9"" y=""-140"" z=""3"" yaw=""90"" ",1,0,0,1,2,following 2 cars good,2
 OtherLeadingVehicle_2,"x=""-510"" y=""88"" z=""3"" yaw=""91"" ",1,0,1,1,2,changes lane,2
 OtherLeadingVehicle_3,"x=""82"" y=""249.1"" z=""3"" yaw=""-33"" ",1,0,0,1,2,drives slow,2
-OtherLeadingVehicle_4,"x=""138.9"" y=""34.9"" z=""11"" yaw=""1"" ",1,0,1,0,2,successfull lane change, cannot follow vehicle,1
+OtherLeadingVehicle_4,"x=""138.9"" y=""34.9"" z=""11"" yaw=""1"" ",1,0,1,0,2,successful lane change cannot follow vehicle,1
 OtherLeadingVehicle_5,"x=""-110"" y=""9.1"" z=""9.5"" yaw=""180"" ",0,,,,,Scenario not loadable,
 OtherLeadingVehicle_6,"x=""-12.5"" y=""-17"" z=""3"" yaw=""90"" ",1,0,1,0,2,Changes lane,2
 OtherLeadingVehicle_7,"x=""125.5"" y=""225.1"" z=""3"" yaw=""-25"" ",1,0,0,0,2,drives slow,2
