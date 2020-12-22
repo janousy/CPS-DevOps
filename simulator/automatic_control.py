@@ -88,29 +88,30 @@ def get_actor_display_name(actor, truncate=250):
 
 
 # Start Modded Area
-location = input('Random Location?\n y/n:  ')
-if location == 'y':
-    print('Set to random location')
-    random_location = True
-else:
-    random_location = False
-destination_point = input('Random Destination?\n y/n:  ')
-if destination_point == 'y':
-    print('Set to random destination')
-    random_destination = True
-else:
-    random_destination = False
-url = 'https://raw.githubusercontent.com/janousy/CPS-DevOps/main/simulator/vehicles.csv'
-response = urllib.request.urlopen(url)
-lines = [l.decode('utf-8') for l in response.readlines()]
-cr = csv.reader(lines)
-for row in cr:
-    print(row)
-print('Default car for scenarios: Nr.25 Lincoln')
-car_blueprint = input('Choose a car number: ')
-
+scenario_found = False
+while not scenario_found:
+    selected_scenario = input('Which scenario? \n')
+    if selected_scenario != 'n':
+        url = 'https://raw.githubusercontent.com/janousy/CPS-DevOps/main/simulator/cps_categorized.csv'
+        response = urllib.request.urlopen(url)
+        lines = [l.decode('utf-8') for l in response.readlines()]
+        cr = csv.reader(lines)
+        for row in cr:
+            if re.search(selected_scenario, str(row).strip('[]')):
+                car_points = re.findall(r'"([^"]*)"', str(row).strip('[]'))
+                print(car_points)
+                scenario_x = float(car_points[0])
+                scenario_y = float(car_points[1])
+                scenario_z = float(car_points[2])
+                scenario_yawn = float(car_points[3])
+                scenario_found = True
+            if scenario_found:
+                break
+select_destination = False
+destination_point = input('Default destination?\ny/n: ')
+if destination_point == 'n':
+    select_destination = True
 # End Modded Area
-
 
 # ==============================================================================
 # -- World ---------------------------------------------------------------
@@ -154,8 +155,8 @@ class World(object):
             random.seed(args.seed)
 
         # Start Modded Area
-        blueprint = self.world.get_blueprint_library().filter(self._actor_filter)[int(car_blueprint)]
-        print(blueprint)
+        blueprint = self.world.get_blueprint_library().filter(self._actor_filter)[25]
+        print('Car: ', blueprint)
         # End Modded Area
         blueprint.set_attribute('role_name', 'hero')
         if blueprint.has_attribute('color'):
@@ -178,14 +179,11 @@ class World(object):
                 sys.exit(1)
 
             # Start Modded Area:
-            if random_location:
-                spawn_point = self.map.get_spawn_points()[0]
-            else:
-                spawn_point = self.map.get_spawn_points()[0]
-                spawn_point.location.x = int(input('x='))
-                spawn_point.location.y = int(input('y='))
-                spawn_point.location.z = int(input('z='))
-                spawn_point.rotation.yaw = int(input('yaw='))
+            spawn_point = self.map.get_spawn_points()[0]
+            spawn_point.location.x = scenario_x
+            spawn_point.location.y = scenario_y
+            spawn_point.location.z = scenario_z
+            spawn_point.rotation.yaw = scenario_yawn
             # End Modded Area
 
             self.player = self.world.try_spawn_actor(blueprint, spawn_point)
@@ -753,26 +751,26 @@ def game_loop(args):
             random.shuffle(spawn_points)
 
             # Start Modded Area
-            if random_destination:
-                if spawn_points[0].location != agent.vehicle.get_location():
-                    destination = spawn_points[0].location
-                else:
-                    destination = spawn_points[1].location
+            if not select_destination:
+                destination = spawn_points[0]
+                destination.location.x = 300
+                destination.location.y = 300
+                destination.location.z = 300
+                destination = destination.location
             else:
                 destination = spawn_points[0]
-                print('Recommended destination points for scenarios are: (300,300,300), (-300,-300,-300)\n' +
-                      'Depending on destination point, the AI will turn left or right or might even change lane to' +
-                      ' reach target')
+                print('Default point is (300,300,300)\n' +
+                      'Enter Destination points:')
                 destination.location.x = int(input('x='))
                 destination.location.y = int(input('y='))
                 destination.location.z = int(input('z='))
                 destination = destination.location
-            print(destination)
+            print('Destination point: ', destination)
             # End Modded Area
 
             agent.set_destination(agent.vehicle.get_location(), destination, clean=True)
         clock = pygame.time.Clock()
-        print(agent.vehicle.get_location())
+        print('Vehicle point: ', agent.vehicle.get_location())
         while True:
             clock.tick_busy_loop(60)
             if controller.parse_events():

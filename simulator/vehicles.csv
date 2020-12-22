@@ -25,5 +25,5 @@ Car Number,Definition,Brand,Type
 23 ,'vehicle', 'audi', 'etron'
 24 ,'vehicle', 'volkswagen', 't2'
 25 ,'vehicle', 'lincoln', 'mkz2017'
-26 ,'vehicle', 'mustang'
+26 ,'vehicle', 'mustang', 'None'
 27 ,'vehicle', 'lincoln2020', 'mkz2020'
