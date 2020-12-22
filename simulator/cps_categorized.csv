@@ -1,5 +1,5 @@
 Name,Ego Vehicle Spawn Points,Valid,City,Lane Change,Turn,Safety Level,Observation,Success
-ChangeLane_1,"x=""284.4"" y=""16.4"" z=""2.5"" yaw=""-173"",1,0,1,0,2,"does not execute required lane change, but breaks",1
+ChangeLane_1,"x=""284.4"" y=""16.4"" z=""2.5"" yaw=""-173"",1,0,1,0,2,does not execute required lane change, but breaks,1
 ChangeLane_2,"x=""107"" y=""133.5"" z=""0.5"" yaw=""0"",1,0,1,0,2,collision with leading vehicle,0
 ,,,,,,,,
 ControlLoss_1,"x=""392.5"" y=""195"" z=""0.5"" yaw=""90"",1,1,0,0,1,no inference,2
@@ -21,14 +21,14 @@ ControlLoss_15,"x=""119.1"" y=""-142.7"" z=""0.1"" yaw=""-170"",1,1,0,1,1,crosse
 CutInFrom_left_Lane,"x=""284.4"" y=""16.4"" z=""2.5"" yaw=""180"",1,0,0,0,2,proper break,2
 CutInFrom_right_Lane,"x=""284.4"" y=""16.4"" z=""2.5"" yaw=""180"",1,0,0,0,2,proper break,2
 ,,,,,,,,
-FollowLeadingVehicle_1,"x=""107"" y=""133"" z=""0.5"" yaw=""0"",1,1,0,0,2,"proper break, does not actually follow vehicle",2
+FollowLeadingVehicle_1,"x=""107"" y=""133"" z=""0.5"" yaw=""0"",1,1,0,0,2,proper break, does not actually follow vehicle,2
 FollowLeadingVehicleWithObstacle_1,"x=""107"" y=""133.5"" z=""0.5"" yaw=""0"",1,1,0,0,3,proper break with interfering cyclist,2
 FollowLeadingVehicleWithObstacle_2,"x=""105"" y=""199.1"" z=""3"" yaw=""0"",1,1,0,0,3,proper break and following,2
-FollowLeadingVehicle_3,"x=""105"" y=""199.1"" z=""0.5"" yaw=""0"",1,1,0,1,2,"multiple lane crossings, proper following",1
+FollowLeadingVehicle_3,"x=""105"" y=""199.1"" z=""0.5"" yaw=""0"",1,1,0,1,2,multiple lane crossings, proper following,1
 FollowLeadingVehicleWithObstacle_3,"x=""28.7"" y=""302.5"" z=""0.4"" yaw=""180"",1,1,0,1,3,crosses lane and collides with leading vehicle,0
 FollowLeadingVehicle_4,"x=""28.7"" y=""302.5"" z=""0.4"" yaw=""180"",1,1,0,0,2,collision with leading vehicle,0
 FollowLeadingVehicleWithObstacle_4,"x=""120"" y=""193"" z=""3"" yaw=""180"",1,1,0,0,3,collision with leading vehicle,0
-FollowLeadingVehicle_5,"x=""-337  "" y=""435.8"" z=""5.5"" yaw=""0"",1,0,0,1,2,"no collision, not actually following leading vehicle",1
+FollowLeadingVehicle_5,"x=""-337  "" y=""435.8"" z=""5.5"" yaw=""0"",1,0,0,1,2,no collision, not actually following leading vehicle,1
 FollowLeadingVehicleWithObstacle_5,"x=""-337  "" y=""435.8"" z=""5.5"" yaw=""0"",1,0,0,1,3,proper break,2
 FollowLeadingVehicle_6,"x=""44.8"" y=""-98.3"" z=""3"" yaw=""-18"",1,0,0,1,2,good following,2
 FollowLeadingVehicleWithObstacle_6,"x=""44.8"" y=""-98.3"" z=""3"" yaw=""-18"",1,0,0,1,3,good break and following,2
@@ -48,12 +48,12 @@ FreeRide_2,"x=""132"" y=""215"" z=""3"" yaw=""90"",1,1,0,1,0,free ride in villag
 FreeRide_3,"x=""207"" y=""59"" z=""3"" yaw=""180"",1,1,1,1,0,free ride in city without any obstacles,2
 FreeRide_4,"x=""269"" y=""-246"" z=""3"" yaw=""0"",1,1,0,1,0,Car doesnt move,0
 MultiEgo_1,"x=""270"" y=""129"" z=""0"" yaw=""180"", x=""100"" y=""133"" z=""0"" yaw=""0"",0,,,,,unable to spawn multiple autonomous agents,
-MultiEgo_2,"x=""207"" y=""59"" z=""0"" yaw=""180"", x=""237"" y=""-95.0754252474"" z=""0"" ",0,,,,,unable to spawn multiple autonomous agents,
+MultiEgo_2,"x=""207"" y=""59"" z=""0"" yaw=""180"", x=""237"" y=""-95.0754252474"" z=""0"" ,0,,,,,unable to spawn multiple autonomous agents,
 ,,,,,,,,
 OtherLeadingVehicle_1,"x=""388.9"" y=""-140"" z=""3"" yaw=""90"",1,0,0,1,2,following 2 cars good,2
 OtherLeadingVehicle_2,"x=""-510"" y=""88"" z=""3"" yaw=""91"",1,0,1,1,2,changes lane,2
 OtherLeadingVehicle_3,"x=""82"" y=""249.1"" z=""3"" yaw=""-33"",1,0,0,1,2,drives slow,2
-OtherLeadingVehicle_4,"x=""138.9"" y=""34.9"" z=""11"" yaw=""1"",1,0,1,0,2,"successfull lane change, cannot follow vehicle",1
+OtherLeadingVehicle_4,"x=""138.9"" y=""34.9"" z=""11"" yaw=""1"",1,0,1,0,2,successfull lane change, cannot follow vehicle,1
 OtherLeadingVehicle_5,"x=""-110"" y=""9.1"" z=""9.5"" yaw=""180"",0,,,,,Scenario not loadable,
 OtherLeadingVehicle_6,"x=""-12.5"" y=""-17"" z=""3"" yaw=""90"",1,0,1,0,2,Changes lane,2
 OtherLeadingVehicle_7,"x=""125.5"" y=""225.1"" z=""3"" yaw=""-25"",1,0,0,0,2,drives slow,2
@@ -61,13 +61,13 @@ OtherLeadingVehicle_8,"x=""-226.9"" y=""100"" z=""11"" yaw=""-88"",1,0,0,0,2,dri
 OtherLeadingVehicle_9,"x=""-10"" y=""191.1"" z=""3"" yaw=""-180"",1,0,0,1,2,changes lane,2
 OtherLeadingVehicle_10,"x=""188.9"" y=""-100"" z=""3"" yaw=""90"",1,0,0,0,2,drives slow,2
 ,,,,,,,,
-NoSignalJunctionCrossing,"x=""-74.32"" y=""-50"" z=""0.5"" yaw=""270"",1,1,0,1,2,"successfull stop at junction, while other vehicle crossing ",2
+NoSignalJunctionCrossing,"x=""-74.32"" y=""-50"" z=""0.5"" yaw=""270"",1,1,0,1,2,successfull stop at junction, while other vehicle crossing,2
 StationaryObjectCrossing_1,"x=""7.63"" y=""109.91"" z=""1.22"" yaw=""359"",1,0,0,0,1,crashes static object and keeps on driving,0
-DynamicObjectCrossing_1,"x=""7.63"" y=""109.91"" z=""1.22"" yaw=""359"",1,0,0,0,2,"breaks, but probably should stop for pedestrian and let pass",1
+DynamicObjectCrossing_1,"x=""7.63"" y=""109.91"" z=""1.22"" yaw=""359"",1,0,0,0,2,breaks, but probably should stop for pedestrian and let pass,1
 StationaryObjectCrossing_2,"x=""180.93"" y=""105.31"" z=""1.22"" yaw=""180"",1,0,0,0,1,crashes static object and keeps on driving,0
-DynamicObjectCrossing_2,"x=""180.93"" y=""105.31"" z=""1.22"" yaw=""180"",1,1,0,0,2,"breaks, but probably should stop for pedestrian and let pass",1
-StationaryObjectCrossing_3,"x=""239.39"" y=""113.42"" z=""2.36"" yaw=""270"",1,1,0,0,2,"breaks, but probably should stop for pedestrian and let pass",1
-DynamicObjectCrossing_3,"x=""110"" y=""129"" z=""1"" yaw=""180"",1,1,0,0,2,"breaks, but probably should stop for pedestrian and let pass",1
+DynamicObjectCrossing_2,"x=""180.93"" y=""105.31"" z=""1.22"" yaw=""180"",1,1,0,0,2,breaks, but probably should stop for pedestrian and let pass,1
+StationaryObjectCrossing_3,"x=""239.39"" y=""113.42"" z=""2.36"" yaw=""270"",1,1,0,0,2,breaks, but probably should stop for pedestrian and let pass,1
+DynamicObjectCrossing_3,"x=""110"" y=""129"" z=""1"" yaw=""180"",1,1,0,0,2,breaks, but probably should stop for pedestrian and let pass,1
 StationaryObjectCrossing_4,"x=""232.36"" y=""113.29"" z=""3"" yaw=""90"",1,0,0,1,1,crashes into object,0
 DynamicObjectCrossing_4,"x=""232.36"" y=""113.29"" z=""2.46"" yaw=""90"",1,1,0,1,2,ignores pedestrian,1
 StationaryObjectCrossing_5,"x=""156.27"" y=""18.7"" z=""10.31"" yaw=""180"",1,0,0,0,1,crashes into object,0
