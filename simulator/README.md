@@ -112,26 +112,11 @@ python config.py --map Town01
 
 The carla repository itself also provides automatic control of vehicles, an initial baseline for the carla challenge (<https://carlachallenge.org/>). You will find the initial file at in their [GitHub repository](https://github.com/carla-simulator/carla/tree/master/PythonAPI/examples/automatic_control.py)
 
-This repo includes a modified version of the automatic_control.py, such that the autonomous agent can be loaded into a scenario of the ScenarioRunner. We modified this version to able to integrate it to scenarios provided by the ScenarioRunner. See the file automatic_control.py in our repository and search for the method _restart_ to find our changes.
+This repo includes a modified version of the automatic_control.py, such that the autonomous agent can be loaded into a scenario of the ScenarioRunner. We modified this version to able to integrate it to scenarios provided by the ScenarioRunner. See the file automatic_control.py in our repository and search for the 'Modded Area' without '' to find our changes.
 
 You can find available scenarios in the file "scenarios_categorized.csv". These scenarios are initially provided by Cara ScenarioRunner, which can be found [here](https://github.com/carla-simulator/scenario_runner/tree/master/srunner/examples). A complete description of all the scenarios is available [here](https://carla-scenariorunner.readthedocs.io/en/latest/list_of_scenarios/). To be able to run the autonomous agent inside a started scenario, follow these instructions.
 
 - select a scenario you want to run
-- adjust spawn location according to provided coordinates:
-
-```
-# Modded Area
-            # if spawn_points[0].location != agent.vehicle.get_location():
-            #    destination = spawn_points[0].location
-            # else:
-            #     destination = spawn_points[1].location
-            destination = spawn_points[0]
-            destination.location.x = 145
-            destination.location.y = 200
-            destination.location.z = 200
-            destination = destination.location
-```
-
 - you may want to save (or overwrite) your file in the same location as 'carla/PythonAPI/examples/automatic_control.py' provided by the carla repository
 - run the scenario:
 
@@ -144,6 +129,12 @@ You can find available scenarios in the file "scenarios_categorized.csv". These 
 
   `python automatic_control.py`
 
+- We modified the automatic_control.py such that the location and spawn_point is no longer random. After starting the script it will ask you if you want to set a location, a destination and what car you want to use.
+- You have to enter the location point (x,y,z,yawn) of your chosen scenario. Set an appropriate destination point (x,y,z) far from your spawn point since it will de-spawn as soon as it reached its destination. (Before the scenario_runner ends)
+- Therefore there are two provided recommended destination points that worked for almost every scenario. (300,300,300 works almost everytime)
+- Choose number 23 as you car. We used it for the scenario evaluation.
+- Attention: It is possible that your defined destination point causes the AI to turn right at an intersection to reach the destination but the scenario wants it to turn left (SignalizedJunctionLeftTurn_1). In this case it is recommended to set the destination point to the complete opposite direction as it often solves the problem. (-300,-300,-300)
+- The scenario_runner will independently stop if its think the scenario is over. The AI keeps driving until it reaches its target. You can stop further traveling by hitting the ESC key.
 # Scenario Classification
 
 The following list was used to evaluate executed scenarios together with our AI agent. The full list with possible levels for each aspect is available [here](https://github.com/janousy/CPS-DevOps/blob/main/simulator/checklist.md) with . Each scenario was executed manually at least once, with adjusted spawn coordinates.
