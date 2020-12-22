@@ -153,9 +153,7 @@ All results obtained from the respective scenarios can be found as a CSV [here](
 # Future Work
 
 **Improvements to the AI agent:**<br>
-Currently, executing a scenario is rather inefficient since the spawn points for each scenario need to be adjusted in the command line. Refactoring the agent and then reading the spawn coordinates from a file indexed by scenario name would make the process a lot more efficient. 
-Besides automatically integrating spawn points for scenarios, it also lacks of destination_point information for each scenario which could be added to the cps_categorized.csv. This comes along with a lot of testing.
-Additionally, having a more sophisticated AI would make the evaluation of scenarios more meaningful.
+Currently, executing a scenario is rather inefficient since the destination point for each scenario might need to be adjusted in the command line. Finding the destination coordinates for the scenarios where not found yet in the scenario files. Additionally, having a more sophisticated AI would make the evaluation of scenarios more meaningful.
 
 **Compatibility of Scenarios and agents:**<br>
 As a baseline for our AI agent, we chose the pre-built one from Carla due to time restriction. Authors of the ScenarioRunner do not recommend this procedure. Moreover, this configuration makes running scenarios error prone, for example due to spawn points being occupied. The ScenarioRunner project itself also provides an AI agent which can be extended. More detail on this can be found in the documentation of the [Carla Challenge](https://carlachallenge.org/get-started/). However, building an autonomous agent was not within the scope of our project.
