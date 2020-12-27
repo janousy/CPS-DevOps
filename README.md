@@ -36,10 +36,17 @@ In this project, we investigate the usage of simulations environment and DevOps 
 The methodology and findings on how other safety criteria were determined can be found in a subfolder of this repository at [CPS-DevOps/blob/main/simulator/README.md](https://github.com/janousy/CPS-DevOps/blob/main/simulator/README.md)
 
 ## Future Work
-
+- extend with carla. 
 ### Pipeline Extension
 
 ### Evaluation of Other Scenarios
+
+Click [here](https://github.com/janousy/CPS-DevOps/blob/main/simulator/README.md) to read further details about the future work for the simulator.
+<br>**Summary:**<br>
+The baseline for our AI agent is the pre-built one from Carla. Improving the AI agent to be more sophisticated would make the evaluation of the scenarios more meaningful. 
+Additionally, adding configured destination points according to the scenarios would simplify the scenarios run through and evaluation.
+An extension of the Classification Criteria with traffic rate, weather etc. would add more sense to the evaluation alongside with building more purposeful
+custom scenarios for our AI to provide an extended data set.
 
 ## Acknowledgement
 
