@@ -45,9 +45,15 @@ The methodology and findings on how other safety criteria were determined can be
 
 ## Future Work
 
-An integration of our evaluated data of the scenarios into to the pipeline extension would be an ultimate goal. Therefore, the pipeline has to be adjusted to read our evaluated dataset of Carla and not only BeamNG.
-
 ### Pipeline Extension
+
+#### Simulator consistency
+
+An integration of our evaluated data of the scenarios into the pipeline extension would be an ultimate goal. Therefore, the pipeline has to be adjusted to read our evaluated dataset of Carla and not only BeamNG.
+
+#### Independent server-hosted Pipeline
+
+Currently, the continuous integration with Jenkins requires a fixed local machine to host. To provide a seamless pipeline that is independent from any fixed local machine, Jenkins could be setup to run directly on the server. This way no local machine would be needed for a working pipeline to the server. However, with this approach the computed results would still need to be fetched manually from the server to a local machine for further analysis.
 
 ### Scenario Safety
 
@@ -65,7 +71,7 @@ The following developers were involved in the project:
 - Ramon Solo de Zaldivar: [solodezaldivar](https://github.com/solodezaldivar)
 - Janosch Baltensberger: [janousy](https://github.com/janousy)
 - Michael Bucher: [mialbu](https://github.com/mialbu)
-- Gokila Senthilkumar:
+- Gokila Senthilkumar
 
 ## References
 
