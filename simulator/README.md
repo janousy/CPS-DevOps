@@ -12,8 +12,6 @@ Useful links:
 - Scenario Runner: <https://github.com/carla-simulator/scenario_runner>
 - Scenario Runner Doc: <https://carla-scenariorunner.readthedocs.io/en/latest/>
 
-```
-
 # Autonomous Agent
 
 The carla repository itself also provides automatic control of vehicles, an initial baseline for the carla challenge (<https://carlachallenge.org/>). You will find the initial file at in their [GitHub repository](https://github.com/carla-simulator/carla/tree/master/PythonAPI/examples/automatic_control.py)
@@ -25,14 +23,11 @@ You can find available scenarios in the file "scenarios_categorized.csv". These 
 - select a scenario you want to run
 - you may want to save (or overwrite) your file in the same location as 'carla/PythonAPI/examples/automatic_control.py' provided by the carla repository
 - run the scenario:
-```
 
-```
-cd ~scenario-runner-root
-python scenario_runner.py --scenario (Scenario Name) --reloadWorld --waitForEgo
-```
-
-```
+  ```
+  cd ~scenario-runner-root
+  python scenario_runner.py --scenario (Scenario Name) --reloadWorld --waitForEgo
+  ```
 
 - open another console and inject the autonomous agent:
 
@@ -43,11 +38,14 @@ python scenario_runner.py --scenario (Scenario Name) --reloadWorld --waitForEgo
 - the spawn point gets automatically collected from our "scenarios_categorized.csv". Set an appropriate destination point (x,y,z) far from the spawn point since it will de-spawn as soon as it reached its destination (before the scenario_runner ends).
 
 - we provide a default destination point: x=300, y=300, z=300, which works almost everytime for all scenarios with no intersection.
+
 - attention: it is possible that your defined destination point causes the AI to turn right at an intersection to reach the destination but the scenario wants it to turn left (SignalizedJunctionLeftTurn_1). In this case it is recommended to set the destination point by your own to the complete opposite direction as it often solves the problem. (x=-300, y=-300,z =-300)
+
 - the car is set to lincoln mkz2017 for all scenarios that got evaluated.
+
 - the scenario_runner will independently stop if the scenario is over. The AI keeps driving until it reaches its target. You can stop further driving by hitting the ESC key.
 
-  # Scenario Classification
+# Scenario Classification
 
 The following list was used to evaluate executed scenarios together with our AI agent. The full list with possible levels for each aspect is available [here](https://github.com/janousy/CPS-DevOps/blob/main/simulator/checklist.md) with . Each scenario was executed manually at least once, with adjusted spawn coordinates.
 
