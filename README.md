@@ -1,7 +1,5 @@
 # Testing Autonomous Cyber-physical Systems with the BeamNG Simulations Soft-Body Environment
 
-[Introduction](#Introduction) [] []
-
 ## Introduction
 
 Cyber-physical Systems (CPS) are systems in which physical mechanisms are typically controlled and monitored by computer-based algorithms, this by leveraging sensors-based analysis and operational data coming from the environment and domain they are operating [5]. Emerging CPS---from medical monitoring systems and devices, robotics and autonomous systems, automatic pilot avionics, and transportation---are expected to play a crucial role in the quality of life of future generations and the global economy [1]
@@ -21,7 +19,7 @@ Our project is based on the master's thesis of [Bill Bosshard](https://github.co
 
 In this project, we investigate the usage of simulations environment and DevOps technologies to reduce the cost of testing CPS in development pipelines. Hence, this project we investigated ways to reduce testing costs in the context of self-driving cars systems. To achieve this goal, we propose to extend CPS-SORTER, a testing framework proposed in recent work [5], which integrates two approaches to predict the lane tracking ability for AI-based simulation engines of self-driving cars, to identify safe and unsafe roads before their executions.
 
-## Extension Points
+### Extension Points
 
 - Set up a DevOps pipeline based on Jenkins to conduct "self-driving quality assessment ot testing scenarios, before executing them" (starting from available scenarios provided by the BeamNG) simulation environment. CI is the most important part of DevOps that is used to integrate various DevOps stages. We use Jenkins as it is a commonly used, open source automation server for Continuous Integration. It helps automating the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
 
@@ -36,17 +34,16 @@ In this project, we investigate the usage of simulations environment and DevOps 
 The methodology and findings on how other safety criteria were determined can be found in a subfolder of this repository at [CPS-DevOps/blob/main/simulator/README.md](https://github.com/janousy/CPS-DevOps/blob/main/simulator/README.md)
 
 ## Future Work
+
 An integration of our evaluated data of the scenarios into to the pipeline extension would be an ultimate goal. Therefore, the pipeline has to be adjusted to read our evaluated dataset of Carla and not only BeamNG.
+
 ### Pipeline Extension
 
 ### Evaluation of Other Scenarios
 
-Click [here](https://github.com/janousy/CPS-DevOps/blob/main/simulator/README.md) to read further details about the future work for the simulator.
-<br>**Summary:**<br>
-The baseline for our AI agent is the pre-built one from Carla. Improving the AI agent to be more sophisticated would make the evaluation of the scenarios more meaningful. 
-Additionally, adding configured destination points according to the scenarios would simplify the scenarios run through and evaluation.
-An extension of the Classification Criteria with traffic rate, weather etc. would add more sense to the evaluation alongside with building more purposeful
-custom scenarios for our AI to provide an extended data set.
+A full explanation on future work to be done can be found at [CPS-DevOps/simulator/README.md](https://github.com/janousy/CPS-DevOps/blob/main/simulator/README.md) in the section "Future Work" to read further details about the future work for the simulator.
+
+Quickly summarized: The baseline for our AI agent is the pre-built one from Carla. Improving the AI agent to be more sophisticated would make the evaluation of the scenarios more meaningful. Additionally, adding configured destination points according to the scenarios would simplify the scenarios run through and evaluation. An extension of the Classification Criteria with traffic rate, weather etc. would add more sense to the evaluation alongside with building more purposeful custom scenarios for our AI to provide an extended data set.
 
 ## Acknowledgement
 
