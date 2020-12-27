@@ -1,6 +1,14 @@
 # Testing Autonomous Cyber-physical Systems with the BeamNG Simulations Soft-Body Environment
 
-[Introduction](https://github.com/janousy/CPS-DevOps/blob/main/README.md#introduction)
+## Content
+
+[Introduction](https://github.com/janousy/CPS-DevOps/blob/main/README.md#introduction)<br>
+[Previous Results](https://github.com/janousy/CPS-DevOps/blob/main/README.md#previous-results)<br>
+[Project Goal](https://github.com/janousy/CPS-DevOps/blob/main/README.md#project-goal)<br>
+[Results](https://github.com/janousy/CPS-DevOps/blob/main/README.md#results)<br>
+[Future Work](https://github.com/janousy/CPS-DevOps/blob/main/README.md#future-work)<br>
+[Acknowledgement](https://github.com/janousy/CPS-DevOps/blob/main/README.md#acknowledgement)<br>
+[References](https://github.com/janousy/CPS-DevOps/blob/main/README.md#references)
 
 ## Introduction
 
@@ -59,7 +67,7 @@ The following developers were involved in the project:
 - Michael Bucher: [mialbu](https://github.com/mialbu)
 - Gokila Senthilkumar:
 
-## References:
+## References
 
 1. S. Abbaspour Asadollah, R. Inam, and H. Hansson. A survey on testing for cyber physical system. In K. El-Fakih, G. Barlas, and N. Yevtushenko, editors, Testing Software and Systems, pages 194–207, Cham, 2015\. Springer Intern. Publishing.
 2. N. Kalra and S. Paddock. Driving to safety: How many miles of driving would it take to demonstrate autonomous vehicle reliability? Transportation Research Part A: Policy and Practice, 94:182–193, 12 2016.
