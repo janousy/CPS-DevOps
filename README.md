@@ -13,6 +13,10 @@ Problem and Recent works: Current CPS development and monitoring practises have 
 
 A first key challenge in testing CPS in different domains is that it requires specific development and verification strategies able to include Hardware-in-the-Loop (HiL) capabilities [1]. Therefore, CPS are far more difficult and expensive to test and integrate [3], since testing the hardware is not always practically possible: the final version of the hardware is often available late and testing on the hardware directly can be expensive. A typical approach to dealing with this is to develop hardware proxies, such as system simulators and digital twins [4, 5].
 
+## Previous Results
+
+Our project is based on the master's thesis of [Bill Bosshard](https://github.com/billbos). Previous results can be found in his thesis [repository](https://github.com/billbos/Master-Thesis-CPS-SORTER) and within the [CPS-Sorter](https://github.com/billbos/CPS-SORTER). His complete thesis may be obtained within agreement of the Institute for Informatics at University of Zurich.
+
 ## Project Goal
 
 In this project, we investigate the usage of simulations environment and DevOps technologies to reduce the cost of testing CPS in development pipelines. Hence, this project we investigated ways to reduce testing costs in the context of self-driving cars systems. To achieve this goal, we propose to extend CPS-SORTER, a testing framework proposed in recent work [5], which integrates two approaches to predict the lane tracking ability for AI-based simulation engines of self-driving cars, to identify safe and unsafe roads before their executions.
@@ -21,13 +25,21 @@ In this project, we investigate the usage of simulations environment and DevOps 
 
 - Set up a DevOps pipeline based on Jenkins to conduct "self-driving quality assessment ot testing scenarios, before executing them" (starting from available scenarios provided by the BeamNG) simulation environment. CI is the most important part of DevOps that is used to integrate various DevOps stages. We use Jenkins as it is a commonly used, open source automation server for Continuous Integration. It helps automating the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
 
-- Determine other safety critical criteria to integrate in the pipeline.
+- Determine other safety critical criteria to integrate in the pipeline. To do so, other simulators are evaluated and assessed.
 
 ## Results
 
+### Pipeline
+
+### Safety Criteria
+
+The methodology and findings on how other safety criteria were determined can be found in a subfolder of this repository at [CPS-DevOps/blob/main/simulator/README.md](https://github.com/janousy/CPS-DevOps/blob/main/simulator/README.md)
+
 ## Future Work
 
-- extension with carla
+### Pipeline Extension
+
+### Evaluation of Other Scenarios
 
 ## Acknowledgement
 

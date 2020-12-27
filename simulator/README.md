@@ -12,6 +12,10 @@ Useful links:
 - Scenario Runner: <https://github.com/carla-simulator/scenario_runner>
 - Scenario Runner Doc: <https://carla-scenariorunner.readthedocs.io/en/latest/>
 
+# Setup
+
+A guideline on how to set up Carla including the ScenarioRunner can be found at [CPS-DevOps/simulator/installation.md](https://github.com/janousy/CPS-DevOps/blob/main/simulator/installation.md)
+
 # Autonomous Agent
 
 The carla repository itself also provides automatic control of vehicles, an initial baseline for the carla challenge (<https://carlachallenge.org/>). You will find the initial file at in their [GitHub repository](https://github.com/carla-simulator/carla/tree/master/PythonAPI/examples/automatic_control.py)
