@@ -1,5 +1,14 @@
 # Installation and setup
 
+The following instructions provide a walkthrough on how to setup the ScenarioRunner together with Carla.
+
+Requirements:
+
+- Server side: A 4GB minimum GPU will be needed to run a highly realistic environment. A dedicated GPU is highly advised for machine learning.
+- Client side: Python is necessary to access the API via command line. Also, a good internet connection and two TCP ports (2000 and 2001 by default).
+- System requirements: Any 64-bits OS should run CARLA. However, since release 0.9.9, CARLA cannot run in 16.04 Linux systems with default compilers. These should be upgraded to work with CARLA.
+- Other requirements. Two Python modules: Pygame to create graphics directly with Python, and Numpy for great calculus.
+
 ## Getting ScenarioRunner up and ready:
 
 (This manual uses Anaconda to set up a python environment, other options can be used as well)

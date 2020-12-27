@@ -29,7 +29,17 @@ In this project, we investigate the usage of simulations environment and DevOps 
 
 - extension with carla
 
-## Contact Information
+## Acknowledgement
+
+This project was conducted in the context of the course "Software Maintenance and Evolution ". You can find the outline of the course [here](https://www.ifi.uzh.ch/en/seal/teaching/courses/sme.html).
+
+The following developers were involved in the project:
+
+- Alain Küng: [alainkueng](https://github.com/alainkueng)
+- Ramon Solo de Zaldivar: [solodezaldivar](https://github.com/solodezaldivar)
+- Janosch Baltensberger: [janousy](https://github.com/janousy)
+- Michael Bucher: [mialbu](https://github.com/mialbu)
+- Gokila Senthilkumar:
 
 ## References:
 
