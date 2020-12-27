@@ -41,7 +41,7 @@ See [here](https://github.com/janousy/CPS-DevOps/blob/main/pipeline/README.md) f
 
 ### Safety Criteria
 
-The methodology and findings on how other safety criteria were determined can be found in a subfolder of this repository at [CPS-DevOps/blob/main/simulator/README.md](https://github.com/janousy/CPS-DevOps/blob/main/simulator/README.md).
+The methodology and findings on how other safety criteria were determined can be found [here](https://github.com/janousy/CPS-DevOps/blob/main/simulator/README.md).
 
 ## Future Work
 
@@ -57,7 +57,7 @@ Currently, the continuous integration with Jenkins requires a fixed local machin
 
 ### Scenario Safety
 
-A full explanation on future work to be done can be found at [CPS-DevOps/simulator/README.md](https://github.com/janousy/CPS-DevOps/blob/main/simulator/README.md) in the section "Future Work".
+A full explanation on future work to be done can be found [here](https://github.com/janousy/CPS-DevOps/blob/main/simulator/README.md) in the section `Future Work`.
 
 Quickly summarized: The baseline for our AI agent is the pre-built one from Carla. Improving the AI agent to be more sophisticated would make the evaluation of the scenarios more meaningful. Additionally, adding configured destination points according to the scenarios would simplify the scenarios run through and evaluation. An extension of the Classification Criteria with traffic rate, weather etc. would add more sense to the evaluation alongside with building more purposeful custom scenarios for our AI to provide an extended data set.
 
