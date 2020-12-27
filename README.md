@@ -37,6 +37,8 @@ In this project, we investigate the usage of simulations environment and DevOps 
 
 ### Pipeline
 
+See [here](https://github.com/janousy/CPS-DevOps/blob/main/pipeline/README.md) for more information about the built pipeline and [here](https://github.com/janousy/CPS-DevOps/blob/main/pipeline/installation.md) for an installation guideline.
+
 ### Safety Criteria
 
 The methodology and findings on how other safety criteria were determined can be found in a subfolder of this repository at [CPS-DevOps/blob/main/simulator/README.md](https://github.com/janousy/CPS-DevOps/blob/main/simulator/README.md)
