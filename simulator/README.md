@@ -14,7 +14,7 @@ Useful links:
 
 # Setup
 
-A guideline on how to set up Carla including the ScenarioRunner can be found at [CPS-DevOps/simulator/setup/installation.md](https://github.com/janousy/CPS-DevOps/blob/main/simulator/setup/installation.md)
+A guideline on how to set up Carla including the ScenarioRunner can be found at [CPS-DevOps/simulator/setup/installation.md](https://github.com/janousy/CPS-DevOps/blob/main/simulator/setup/installation.md). Additionally, there are two videos available for help using the server and running specified scenarios.
 
 # Autonomous Agent
 
