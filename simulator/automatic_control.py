@@ -92,7 +92,7 @@ scenario_found = False
 while not scenario_found:
     selected_scenario = input('Which scenario? \n')
     if selected_scenario != 'n':
-        url = 'https://github.com/janousy/CPS-DevOps/blob/main/results/cps_categorized.csv'
+        url = 'https://raw.githubusercontent.com/janousy/CPS-DevOps/main/results/cps_categorized.csv'
         response = urllib.request.urlopen(url)
         lines = [l.decode('utf-8') for l in response.readlines()]
         cr = csv.reader(lines)
