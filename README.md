@@ -25,7 +25,7 @@ In this project, we investigate the usage of simulations environment and DevOps 
 
 - Set up a DevOps pipeline based on Jenkins to conduct "self-driving quality assessment ot testing scenarios, before executing them" (starting from available scenarios provided by the BeamNG) simulation environment. CI is the most important part of DevOps that is used to integrate various DevOps stages. We use Jenkins as it is a commonly used, open source automation server for Continuous Integration. It helps automating the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
 
-- Determine other safety critical criteria to integrate in the pipeline. To do so, other simulators are evaluated and assessed.
+- Determine other safety critical criteria to integrate in the pipeline. To do so, other simulators are evaluated and assessed. The choise of the simulator should be based on the requirements given by the environment (e.g. the Ubuntu server provided).
 
 ## Results
 
