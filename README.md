@@ -36,7 +36,7 @@ In this project, we investigate the usage of simulations environment and DevOps 
 The methodology and findings on how other safety criteria were determined can be found in a subfolder of this repository at [CPS-DevOps/blob/main/simulator/README.md](https://github.com/janousy/CPS-DevOps/blob/main/simulator/README.md)
 
 ## Future Work
-- extend with carla. 
+An integration of our evaluated data of the scenarios into to the pipeline extension would be an ultimate goal. Therefore, the pipeline has to be adjusted to read our evaluated dataset of Carla and not only BeamNG.
 ### Pipeline Extension
 
 ### Evaluation of Other Scenarios
