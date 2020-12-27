@@ -1,7 +1,5 @@
 # Testing Autonomous Cyber-physical Systems with the BeamNG Simulations Soft-Body Environment
 
-## Content
-
 [Introduction](https://github.com/janousy/CPS-DevOps/blob/main/README.md#introduction)<br>
 [Previous Results](https://github.com/janousy/CPS-DevOps/blob/main/README.md#previous-results)<br>
 [Project Goal](https://github.com/janousy/CPS-DevOps/blob/main/README.md#project-goal)<br>
