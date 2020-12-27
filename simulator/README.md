@@ -12,100 +12,6 @@ Useful links:
 - Scenario Runner: <https://github.com/carla-simulator/scenario_runner>
 - Scenario Runner Doc: <https://carla-scenariorunner.readthedocs.io/en/latest/>
 
-# Installation and setup
-
-## Getting ScenarioRunner up and ready:
-
-(This manual uses Anaconda to set up a python environment, other options can be used as well)
-
-- Set up Carla precompiled
-
-  - <https://carla.readthedocs.io/en/latest/start_quickstart/>
-
-- set up an environment e.g. with Anaconda
-
-- install required python packages:
-
-  `pip install ~carla/PythonAPI/requirements.txt`
-
-- Get ScenarioRunner package with **same version as installed Carla**
-
-  - <https://github.com/carla-simulator/scenario_runner/blob/master/Docs/getting_scenariorunner.md>
-
-### Setting up the Python Environment
-
-- Set up a python environment that uses the same python version as Carla:
-
-  - you can find the required version stated in the name of the .egg file:
-
-    `%CARLA_ROOT%\PythonAPI\carla\dist\carla-0.9.10-py3.7-win-amd64.egg`
-
-- pip install numpy pygame
-
-- make sure correct version of networkx==2.2 is installed (see scenariorunner docs)
-
-- `pip install -r ~/scenariorunner_root/requirements.txt`
-
-- shapely problems: <https://towardsdatascience.com/install-shapely-on-windows-72b6581bb46c> (conda install -c conda-forge geos=3.7.1 solved the issue in our case)
-
-- Set up environment variables:
-
-  - <https://github.com/carla-simulator/scenario_runner/blob/master/Docs/getting_scenariorunner.md>
-  - <https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#setting-environment-variables>
-
-```
-conda activate (your environment)
-```
-
-```
-conda env config vars set CARLA_ROOT=PATH_TO_CARLA_ROOT
-conda env config vars set SCENARIO_RUNNER_ROOT=C:\Users\janosch\Repos\scenario_runner-0.9.10
-conda env config vars set PYTHONPATH=%CARLA_ROOT%\PythonAPI;%CARLA_ROOT%\PythonAPI\carla\agents;%CARLA_ROOT%\PythonAPI\carla\dist\carla-0.9.10-py3.7-win-amd64.egg
-```
-
-reactivate conda environment and check applied changes:
-
-```
-conda activate (your env)
-conda env config vars list
-```
-
-# Running the ScenarioRunner
-
-- Run Carla with low graphic mode:
-
-  `$ ./CarlaUE4.exe -carla-server -quality-level=Low`
-
-- (optional) check for port with admin cmd:
-
-  `netstat -ab`
-
-  => CarlaUE4 should be running on port 2000
-
-- get list of scenarios available:
-
-  `python scenario_runner.py --list`
-
-- run scenario:
-
-  `python scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld`
-
-  if you load the automatic control:
-
-  `python scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld --waitForEgo`
-
-- activate control:
-
-  `python manual_control.py`
-
-  CAVEAT: both carla and scenario runner provide a script for manual control, however the one of scenario runner is recommended
-
-- change map:
-
-```
-cd ~CARLA\PythonAPI\util\config.py
-python config.py --list
-python config.py --map Town01
 ```
 
 # Autonomous Agent
@@ -119,23 +25,29 @@ You can find available scenarios in the file "scenarios_categorized.csv". These 
 - select a scenario you want to run
 - you may want to save (or overwrite) your file in the same location as 'carla/PythonAPI/examples/automatic_control.py' provided by the carla repository
 - run the scenario:
+```
 
-  ```
-    cd ~scenario-runner-root
-    python scenario_runner.py --scenario (Scenario Name) --reloadWorld --waitForEgo
-  ```
+```
+cd ~scenario-runner-root
+python scenario_runner.py --scenario (Scenario Name) --reloadWorld --waitForEgo
+```
+
+```
 
 - open another console and inject the autonomous agent:
 
   `python automatic_control.py`
 
 - we modified the automatic_control.py such that the spawn point, the destination and the car is no longer randomly set. After starting the script it will ask you which scenario you want to use.
+
 - the spawn point gets automatically collected from our "scenarios_categorized.csv". Set an appropriate destination point (x,y,z) far from the spawn point since it will de-spawn as soon as it reached its destination (before the scenario_runner ends).
-- we provide a default destination point: x=300, y=300, z=300, which works almost everytime for all scenarios with no intersection. 
+
+- we provide a default destination point: x=300, y=300, z=300, which works almost everytime for all scenarios with no intersection.
 - attention: it is possible that your defined destination point causes the AI to turn right at an intersection to reach the destination but the scenario wants it to turn left (SignalizedJunctionLeftTurn_1). In this case it is recommended to set the destination point by your own to the complete opposite direction as it often solves the problem. (x=-300, y=-300,z =-300)
-- the car is set to lincoln	mkz2017 for all scenarios that got evaluated.
+- the car is set to lincoln mkz2017 for all scenarios that got evaluated.
 - the scenario_runner will independently stop if the scenario is over. The AI keeps driving until it reaches its target. You can stop further driving by hitting the ESC key.
-# Scenario Classification
+
+  # Scenario Classification
 
 The following list was used to evaluate executed scenarios together with our AI agent. The full list with possible levels for each aspect is available [here](https://github.com/janousy/CPS-DevOps/blob/main/simulator/checklist.md) with . Each scenario was executed manually at least once, with adjusted spawn coordinates.
 
