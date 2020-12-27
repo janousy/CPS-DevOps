@@ -47,7 +47,7 @@ Quickly summarized: The baseline for our AI agent is the pre-built one from Carl
 
 ## Acknowledgement
 
-This project was conducted in the context of the course "Software Maintenance and Evolution ". You can find the outline of the course [here](https://www.ifi.uzh.ch/en/seal/teaching/courses/sme.html).
+This project was conducted in the context of the course "Software Maintenance and Evolution ". The course is currently thaught by Dr. Sebastiano Panichella, which was also the supervisor of our project. You can find the outline of the course [here](https://www.ifi.uzh.ch/en/seal/teaching/courses/sme.html).
 
 The following developers were involved in the project:
 
