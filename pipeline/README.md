@@ -1,19 +1,15 @@
-We set up the CPS Sorter on the GPU server that can be accessed through Jenkins, a continous integration tool, where a push or pull request on the main branch of a github repository (https://github.com/solodezaldivar/SME for testing purposes) triggers the jenkins pipeline. The idea is to have a jenkins server running so that the pipeline can execute always but for the sake of this project we have decided to only run the jenkins pipeline locally & leave the implementation of a jenkins node on a server as future work. The steps that we did where:
+# Pipeline
 
-# Step 1
+To test the quality of machine lerning (ML) models, we installed the [CPS Sorter](https://github.com/billbos/CPS-SORTER) on a GPU server.
+We set up a pipeline with [Jenkins](https://www.jenkins.io/) that subscribes the main branch of a github repository (in our case for testing purpose: https://github.com/solodezaldivar/SME). Whenever a commit is pushed to this repository, it is cloned into the server and Jenkins executes commands on it.
+For the sake of this project, the Jenkins pipeline is hosted locally and connects to the server through an ssh connection.
 
-Install Jenkins and added the following plugins:<br>
-a) GitHub Pull Request Builder in order to be able to trigger pipeline builds from pull requests.<br>
-b) [SSH Pipeline Steps](https://www.jenkins.io/doc/pipeline/steps/ssh-steps/) in order to execute our ssh commands on the remote server in the jenkins file.
+The pipeline executes following commands:
 
-# Step 2
+- A virtual environment is created.
+- The cps-sorter runs its model evaluation using test scenarios stored on the server and stores the results in a separate output folder.
+- The results folder is copied to the local machine through the ssh connection.
 
-In Jenkins added our SSH credentials through Manage Jenkins > Manage Credentials ![](https://github.com/janousy/CPS-DevOps/blob/main/pipeline/resources/credentials.png) to allow us to access the GPU server in an automated manner through the JenkinsFile.
+Additionally, a third stage, that could be executed before all of the above commands, new test scenarios could be copied from the local machine to the server as well. (For this project, we commented this command and used the same scenarios for each run).
 
-# Step 3
-
-Created a new pipeline via "New Item > Pipeline" and in the pipeline settings we specify which github project should be tracked, the pipeline triggers (in this case push and pull requests) and finally we defined the Pipeline Script, which is stored in the repository under JenkinsFile. ![](https://github.com/janousy/CPS-DevOps/blob/main/pipeline/resources/jenkinsfile.PNG)
-
-# Step 4
-
-In the github project in "Settings > Webhooks" we add a new webhook and add our Jenkins URL as the Payload URL.<br>![](https://github.com/janousy/CPS-DevOps/blob/main/pipeline/resources/webhook.png)<br> Now because we are running Jenkins locally we do not have a valid URL to set as Payload so we made use of [ngrok](https://ngrok.com/) to expose a the local development server to the Internet with minimal effort and use it's URL as payload. <br> ![](https://github.com/janousy/CPS-DevOps/blob/main/pipeline/resources/ngroki.png) 
+To setup your own pipeline, you can follow the installation steps [here](https://github.com/janousy/CPS-DevOps/edit/main/pipeline/installation.md).
