@@ -20,8 +20,10 @@ The pipeline executes following commands:
 
 Additionally, a third stage, that could be executed before all of the above commands, new test scenarios could be copied from the local machine to the server as well. (For this project, we commented this command and used the same scenarios for each run).
 
+> To setup your own pipeline, you can follow the installation steps [here](https://github.com/janousy/CPS-DevOps/blob/main/pipeline/installation.md).
 
+## Results
 - The results that the developer will get are in the format shown below.
  ![](https://github.com/janousy/CPS-DevOps/blob/main/pipeline/resources/modelEval.PNG)
 
-To setup your own pipeline, you can follow the installation steps [here](https://github.com/janousy/CPS-DevOps/blob/main/pipeline/installation.md).
+
