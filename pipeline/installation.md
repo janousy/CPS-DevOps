@@ -30,6 +30,6 @@ In the github project under `Settings` -> `Webhooks`, you can add a new webhook 
 
 ![](https://github.com/janousy/CPS-DevOps/blob/main/pipeline/resources/webhook.png)<br>
 
-Since we are running Jenkins locally, we do not need to set valid URL as Payload so you can make use of [ngrok](https://ngrok.com/) to expose a local development server to the Internet with minimal effort and use its URL as payload.
+Since we are running Jenkins locally, we do not need to set valid URL as Payload so you can make use of [ngrok](https://ngrok.com/) to expose a local development server to the Internet with minimal effort and use its URL as payload. Also, set your Jenkins URL to resemble the ngrok one with https. See image below.
 
 ![](https://github.com/janousy/CPS-DevOps/blob/main/pipeline/resources/ngroki.png)
