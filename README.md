@@ -70,7 +70,7 @@ The following developers were involved in the project:
 - Ramon Solo de Zaldivar: [solodezaldivar](https://github.com/solodezaldivar)
 - Janosch Baltensberger: [janousy](https://github.com/janousy)
 - Michael Bucher: [mialbu](https://github.com/mialbu)
-- Gokila Senthilkumar
+- Gokila Senthilkumar: [mgoki](https://github.com/mgoki)
 
 ## References
 
