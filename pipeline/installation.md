@@ -1,5 +1,9 @@
 # Installation
-
+## Pre-Requesites
+- Python v3.6
+- Pip
+- Supported OS: Linux, Windows
+<br>
 To setup a Jenkins pipeline locally, you can follow these instructions:
 
 ## Step 1
